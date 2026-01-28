@@ -111,7 +111,7 @@
                   React.createElement('button', {
                     key: item.page,
                     onClick: () => setCurrentPage(item.page),
-                    className: \`text-sm uppercase tracking-widest hover:text-primary transition-colors \${currentPage === item.page ? 'text-primary font-bold' : ''}\`
+                    className: `text-sm uppercase tracking-widest hover:text-primary transition-colors ${currentPage === item.page ? 'text-primary font-bold' : ''}`
                   }, item.name)
                 )
               ),
@@ -136,7 +136,7 @@
                     setCurrentPage(item.page);
                     setMobileMenuOpen(false);
                   },
-                  className: \`block w-full text-left py-2 px-4 hover:bg-surface-light dark:hover:bg-surface-dark \${currentPage === item.page ? 'text-primary font-bold' : ''}\`
+                  className: `block w-full text-left py-2 px-4 hover:bg-surface-light dark:hover:bg-surface-dark ${currentPage === item.page ? 'text-primary font-bold' : ''}`
                 }, item.name)
               )
             )
@@ -222,7 +222,7 @@
                     ),
                     React.createElement('h3', { className: 'font-display text-xl mb-2' }, product.name),
                     React.createElement('p', { className: 'text-sm text-gray-600 dark:text-gray-400 mb-2' }, product.category),
-                    React.createElement('p', { className: 'font-bold' }, \`$\${product.price.toFixed(2)}\`)
+                    React.createElement('p', { className: 'font-bold' }, `$${product.price.toFixed(2)}`)
                   )
                 )
               )
@@ -310,7 +310,7 @@
                   React.createElement('button', {
                     key: cat,
                     onClick: () => setFilter(cat),
-                    className: \`px-4 py-2 rounded-full transition-colors \${filter === cat ? 'bg-primary text-white' : 'bg-surface-light dark:bg-surface-dark'}\`
+                    className: `px-4 py-2 rounded-full transition-colors ${filter === cat ? 'bg-primary text-white' : 'bg-surface-light dark:bg-surface-dark'}`
                   }, cat)
                 )
               ),
@@ -346,7 +346,7 @@
                     ),
                     React.createElement('h3', { className: 'font-display text-lg mb-1' }, product.name),
                     React.createElement('p', { className: 'text-sm text-gray-600 dark:text-gray-400 mb-2' }, product.category),
-                    React.createElement('p', { className: 'font-bold' }, \`$\${product.price.toFixed(2)}\`),
+                    React.createElement('p', { className: 'font-bold' }, `$${product.price.toFixed(2)}`),
                     React.createElement('button', {
                       className: 'mt-2 text-sm text-primary hover:underline'
                     }, 'View Details')
@@ -394,7 +394,7 @@
                 React.createElement('div', { className: 'mb-4' },
                   React.createElement('p', { className: 'text-sm text-gray-600 dark:text-gray-400 mb-2' }, product.category),
                   React.createElement('h1', { className: 'font-display text-4xl mb-4' }, product.name),
-                  React.createElement('p', { className: 'text-2xl font-bold text-primary mb-6' }, \`$\${product.price.toFixed(2)}\`)
+                  React.createElement('p', { className: 'text-2xl font-bold text-primary mb-6' }, `$${product.price.toFixed(2)}`)
                 ),
 
                 React.createElement('div', { className: 'mb-6' },
@@ -510,7 +510,7 @@
                     React.createElement('div', { className: 'text-yellow-500 mb-2' },
                       '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating)
                     ),
-                    React.createElement('p', { className: 'italic mb-2' }, \`"\${review.comment}"\`),
+                    React.createElement('p', { className: 'italic mb-2' }, `"${review.comment}"`),
                     React.createElement('p', { className: 'text-sm text-gray-600 dark:text-gray-400' }, review.product)
                   )
                 )
