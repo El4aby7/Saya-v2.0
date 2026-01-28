@@ -1,0 +1,220 @@
+{
+  "products": [
+    {
+      "id": "radiant-olive-elixir",
+      "name": "Radiant Olive Elixir",
+      "category": "Oils",
+      "price": 45.00,
+      "image": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
+      "description": "Pure restorative serum for timeless beauty. Immerse your skin in the liquid gold of the Mediterranean.",
+      "ingredients": ["Olive Squalane", "Hyaluronic Acid", "Vitamin E"],
+      "benefits": "Deep hydration & repair, antioxidant shield, evening glow",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "argan-oil",
+      "name": "Pure Argan Oil",
+      "category": "Oils",
+      "price": 38.00,
+      "image": "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=600&q=80",
+      "description": "Liquid gold from Morocco. Rich in antioxidants and vitamin E for hair and skin nourishment.",
+      "ingredients": ["100% Pure Argan Oil"],
+      "benefits": "Moisturizes skin, strengthens hair, anti-aging properties",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "damascus-rose-mist",
+      "name": "Damascus Rose Mist",
+      "category": "Treatments",
+      "price": 32.00,
+      "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80",
+      "description": "Refreshing rose water toner that hydrates and balances your skin's pH.",
+      "ingredients": ["Damascus Rose Water", "Glycerin"],
+      "benefits": "Hydrates, tones, balances pH, calms irritation",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "clay-mask",
+      "name": "Moroccan Clay Mask",
+      "category": "Treatments",
+      "price": 28.00,
+      "image": "https://images.unsplash.com/photo-1556228852-80a81849e69f?w=600&q=80",
+      "description": "Deep cleansing mask with authentic Moroccan clay to detoxify and purify.",
+      "ingredients": ["Moroccan Clay", "Rose Water", "Argan Oil"],
+      "benefits": "Deep cleansing, unclogs pores, brightens complexion",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "traditional-soap",
+      "name": "Traditional Savon",
+      "category": "Soaps",
+      "price": 18.00,
+      "image": "https://images.unsplash.com/photo-1600857544200-242c25f7168a?w=600&q=80",
+      "description": "Handcrafted olive oil soap following centuries-old Moroccan traditions.",
+      "ingredients": ["Olive Oil", "Coconut Oil", "Shea Butter"],
+      "benefits": "Gentle cleansing, moisturizing, suitable for all skin types",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "lavender-soap",
+      "name": "Lavender Dreams Soap",
+      "category": "Soaps",
+      "price": 20.00,
+      "image": "https://images.unsplash.com/photo-1585128903994-ee075d6e6b99?w=600&q=80",
+      "description": "Calming lavender soap that soothes the mind and nourishes the skin.",
+      "ingredients": ["Lavender Essential Oil", "Olive Oil", "Coconut Oil"],
+      "benefits": "Relaxing, moisturizing, aromatherapy benefits",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "honey-oat-soap",
+      "name": "Honey & Oat Soap",
+      "category": "Soaps",
+      "price": 22.00,
+      "image": "https://images.unsplash.com/photo-1620916420992-6f9c53d96c4f?w=600&q=80",
+      "description": "Gentle exfoliating soap with organic honey and colloidal oats.",
+      "ingredients": ["Raw Honey", "Colloidal Oats", "Olive Oil"],
+      "benefits": "Gentle exfoliation, moisturizing, soothing",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "radiance-serum",
+      "name": "Radiance Serum",
+      "category": "Oils",
+      "price": 52.00,
+      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
+      "description": "Brightening serum with vitamin C and natural botanicals for luminous skin.",
+      "ingredients": ["Vitamin C", "Rosehip Oil", "Jojoba Oil"],
+      "benefits": "Brightens complexion, evens skin tone, antioxidant protection",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "jade-facial-roller",
+      "name": "Jade Facial Roller",
+      "category": "Sets",
+      "price": 35.00,
+      "image": "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&q=80",
+      "description": "Authentic jade roller for facial massage and lymphatic drainage.",
+      "ingredients": ["100% Natural Jade Stone"],
+      "benefits": "Reduces puffiness, improves circulation, promotes relaxation",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "essential-oils-set",
+      "name": "Essential Oils Collection",
+      "category": "Sets",
+      "price": 68.00,
+      "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
+      "description": "Curated set of three signature oils: Argan, Rosehip, and Jojoba.",
+      "ingredients": ["Argan Oil", "Rosehip Oil", "Jojoba Oil"],
+      "benefits": "Complete skincare routine, multi-purpose oils, travel-friendly",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "soap-gift-set",
+      "name": "Artisan Soap Collection",
+      "category": "Sets",
+      "price": 55.00,
+      "image": "https://images.unsplash.com/photo-1600857544200-242c25f7168a?w=600&q=80",
+      "description": "Beautiful gift set featuring four handcrafted artisan soaps.",
+      "ingredients": ["Variety of Natural Oils and Botanicals"],
+      "benefits": "Perfect gift, variety of scents, eco-friendly packaging",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "night-repair-oil",
+      "name": "Night Repair Oil",
+      "category": "Oils",
+      "price": 48.00,
+      "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80",
+      "description": "Intensive overnight treatment oil to repair and regenerate skin while you sleep.",
+      "ingredients": ["Rosehip Oil", "Vitamin E", "Evening Primrose Oil"],
+      "benefits": "Overnight repair, reduces fine lines, deep nourishment",
+      "inStock": true,
+      "featured": false
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Sarah Jenkins",
+      "location": "London, UK",
+      "rating": 5,
+      "product": "Radiant Olive Elixir",
+      "comment": "I've tried countless luxury serums, but nothing calms my skin like Saya's Olive Elixir. It feels incredibly grounding and natural.",
+      "verified": true,
+      "date": "2024-01-15"
+    },
+    {
+      "id": 2,
+      "name": "Amira M.",
+      "location": "Dubai, UAE",
+      "rating": 5,
+      "product": "Pure Argan Oil",
+      "comment": "Being from Morocco, I know good Argan oil when I see it. Saya delivers the real deal. The packaging is beautiful too, makes for a great gift.",
+      "verified": true,
+      "date": "2024-01-10"
+    },
+    {
+      "id": 3,
+      "name": "Liam Carter",
+      "location": "Sydney, AU",
+      "rating": 5,
+      "product": "Radiance Serum",
+      "comment": "I never knew natural skincare could be this effective. The anti-aging results are visible after just one month.",
+      "verified": true,
+      "date": "2024-01-08"
+    },
+    {
+      "id": 4,
+      "name": "Fatima Zahra",
+      "location": "Cairo, EG",
+      "rating": 5,
+      "product": "Traditional Savon",
+      "comment": "Just buy it. Your skin will thank you later. The texture is divine.",
+      "verified": true,
+      "date": "2024-01-05"
+    },
+    {
+      "id": 5,
+      "name": "Karim H.",
+      "location": "Paris, FR",
+      "rating": 4,
+      "product": "Traditional Savon",
+      "comment": "The Seven d'Encens soap is magic. The texture is incredibly smooth and it lathers my skin feeling renewed and stripped. You can tell the quality ingredients are used. Highly recommend for sensitive skin types.",
+      "verified": true,
+      "date": "2023-12-28"
+    },
+    {
+      "id": 6,
+      "name": "Letia",
+      "location": "New York, US",
+      "rating": 5,
+      "product": "Moroccan Clay Mask",
+      "comment": "Obsessed.",
+      "verified": false,
+      "date": "2023-12-20"
+    },
+    {
+      "id": 7,
+      "name": "Rania",
+      "location": "Casablanca, MA",
+      "rating": 4,
+      "product": "Damascus Rose Mist",
+      "comment": "Gentle on my skin. The soap lather is rich and creamy. It doesn't have that strong artificial scent, just a light natural scent. Very refreshing.",
+      "verified": true,
+      "date": "2023-12-15"
+    }
+  ]
+}
