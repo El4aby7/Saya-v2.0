@@ -6,6 +6,7 @@ const Layout = ({ children, activePage }) => {
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
+        // Dark Mode
         const isDark = localStorage.getItem('darkMode') === 'true';
         setDarkMode(isDark);
         if (isDark) {
@@ -26,8 +27,12 @@ const Layout = ({ children, activePage }) => {
         }
     };
 
-    return React.createElement('div', { className: 'min-h-screen flex flex-col' },
-        React.createElement(Navigation, { activePage, darkMode, toggleDarkMode }),
+    return React.createElement('div', { className: 'min-h-screen flex flex-col transition-colors duration-300 dark:bg-stone-900 dark:text-stone-100' },
+        React.createElement(Navigation, {
+            activePage,
+            darkMode,
+            toggleDarkMode
+        }),
         React.createElement('main', { className: 'flex-grow' }, children),
         React.createElement(Footer)
     );

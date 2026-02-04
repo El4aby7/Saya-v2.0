@@ -1,16 +1,18 @@
 import { React, useState } from '../utils.js';
+import { useLanguage } from '../LanguageContext.js';
 
 const Navigation = ({ activePage, darkMode, toggleDarkMode }) => {
+    const { lang, toggleLanguage, t } = useLanguage();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const navItems = [
-        { name: 'SHOP', href: 'shop.html' },
-        { name: 'ABOUT', href: 'about.html' },
-        { name: 'REVIEWS', href: 'reviews.html' },
-        { name: 'CONTACT', href: 'contact.html' }
+        { label: t('nav.shop'), href: 'shop.html', pageId: 'shop' },
+        { label: t('nav.about'), href: 'about.html', pageId: 'about' },
+        { label: t('nav.reviews'), href: 'reviews.html', pageId: 'reviews' },
+        { label: t('nav.contact'), href: 'contact.html', pageId: 'contact' }
     ];
 
-    const isActive = (name) => activePage === name.toLowerCase();
+    const isActive = (pageId) => activePage === pageId;
 
     return React.createElement('nav', {
         className: 'sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700'
@@ -19,7 +21,7 @@ const Navigation = ({ activePage, darkMode, toggleDarkMode }) => {
             React.createElement('div', { className: 'flex justify-between items-center h-20' },
                 // Mobile menu button
                 React.createElement('button', {
-                    className: 'md:hidden p-2',
+                    className: 'md:hidden p-2 text-stone-600 dark:text-stone-300',
                     onClick: () => setMobileMenuOpen(!mobileMenuOpen)
                 }, '☰'),
 
@@ -34,18 +36,22 @@ const Navigation = ({ activePage, darkMode, toggleDarkMode }) => {
                 ),
 
                 // Desktop Navigation
-                React.createElement('div', { className: 'hidden md:flex space-x-8' },
+                React.createElement('div', { className: 'hidden md:flex space-x-8 rtl:space-x-reverse' },
                     ...navItems.map(item =>
                         React.createElement('a', {
-                            key: item.name,
+                            key: item.pageId,
                             href: item.href,
-                            className: `text-sm uppercase tracking-widest hover:text-primary transition-colors ${isActive(item.name) ? 'text-primary font-bold' : ''}`
-                        }, item.name)
+                            className: `text-sm uppercase tracking-widest hover:text-primary transition-colors ${isActive(item.pageId) ? 'text-primary font-bold' : ''}`
+                        }, item.label)
                     )
                 ),
 
-                // Dark mode toggle
-                React.createElement('div', { className: 'flex items-center space-x-4' },
+                // Actions (Lang + Dark Mode)
+                React.createElement('div', { className: 'flex items-center space-x-4 rtl:space-x-reverse' },
+                     React.createElement('button', {
+                        onClick: toggleLanguage,
+                        className: 'p-2 hover:text-primary transition-colors text-sm font-bold uppercase'
+                    }, lang === 'en' ? 'AR' : 'EN'),
                     React.createElement('button', {
                         onClick: toggleDarkMode,
                         className: 'p-2 hover:text-primary transition-colors'
@@ -59,10 +65,10 @@ const Navigation = ({ activePage, darkMode, toggleDarkMode }) => {
             },
                 ...navItems.map(item =>
                     React.createElement('a', {
-                        key: item.name,
+                        key: item.pageId,
                         href: item.href,
-                        className: `block w-full text-left py-2 px-4 hover:bg-surface-light dark:hover:bg-surface-dark ${isActive(item.name) ? 'text-primary font-bold' : ''}`
-                    }, item.name)
+                        className: `block w-full text-start py-2 px-4 hover:bg-surface-light dark:hover:bg-surface-dark ${isActive(item.pageId) ? 'text-primary font-bold' : ''}`
+                    }, item.label)
                 )
             )
         )
