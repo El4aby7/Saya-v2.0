@@ -4,10 +4,14 @@
       "id": "radiant-olive-elixir",
       "name": "Radiant Olive Elixir",
       "category": "Oils",
-      "price": 45.00,
-      "image": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
+      "price": 45,
+      "image": "assets/images/products/radiant-olive-elixir.jpg",
       "description": "Pure restorative serum for timeless beauty. Immerse your skin in the liquid gold of the Mediterranean.",
-      "ingredients": ["Olive Squalane", "Hyaluronic Acid", "Vitamin E"],
+      "ingredients": [
+        "Olive Squalane",
+        "Hyaluronic Acid",
+        "Vitamin E"
+      ],
       "benefits": "Deep hydration & repair, antioxidant shield, evening glow",
       "inStock": true,
       "featured": true
@@ -16,10 +20,12 @@
       "id": "argan-oil",
       "name": "Pure Argan Oil",
       "category": "Oils",
-      "price": 38.00,
-      "image": "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=600&q=80",
+      "price": 38,
+      "image": "assets/images/products/argan-oil.jpg",
       "description": "Liquid gold from Morocco. Rich in antioxidants and vitamin E for hair and skin nourishment.",
-      "ingredients": ["100% Pure Argan Oil"],
+      "ingredients": [
+        "100% Pure Argan Oil"
+      ],
       "benefits": "Moisturizes skin, strengthens hair, anti-aging properties",
       "inStock": true,
       "featured": true
@@ -28,10 +34,13 @@
       "id": "damascus-rose-mist",
       "name": "Damascus Rose Mist",
       "category": "Treatments",
-      "price": 32.00,
-      "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80",
+      "price": 32,
+      "image": "assets/images/products/damascus-rose-mist.jpg",
       "description": "Refreshing rose water toner that hydrates and balances your skin's pH.",
-      "ingredients": ["Damascus Rose Water", "Glycerin"],
+      "ingredients": [
+        "Damascus Rose Water",
+        "Glycerin"
+      ],
       "benefits": "Hydrates, tones, balances pH, calms irritation",
       "inStock": true,
       "featured": false
@@ -40,10 +49,14 @@
       "id": "clay-mask",
       "name": "Moroccan Clay Mask",
       "category": "Treatments",
-      "price": 28.00,
-      "image": "https://images.unsplash.com/photo-1556228852-80a81849e69f?w=600&q=80",
+      "price": 28,
+      "image": "assets/images/products/clay-mask.jpg",
       "description": "Deep cleansing mask with authentic Moroccan clay to detoxify and purify.",
-      "ingredients": ["Moroccan Clay", "Rose Water", "Argan Oil"],
+      "ingredients": [
+        "Moroccan Clay",
+        "Rose Water",
+        "Argan Oil"
+      ],
       "benefits": "Deep cleansing, unclogs pores, brightens complexion",
       "inStock": true,
       "featured": false
@@ -52,10 +65,14 @@
       "id": "traditional-soap",
       "name": "Traditional Savon",
       "category": "Soaps",
-      "price": 18.00,
-      "image": "https://images.unsplash.com/photo-1600857544200-242c25f7168a?w=600&q=80",
+      "price": 18,
+      "image": "assets/images/products/traditional-soap.jpg",
       "description": "Handcrafted olive oil soap following centuries-old Moroccan traditions.",
-      "ingredients": ["Olive Oil", "Coconut Oil", "Shea Butter"],
+      "ingredients": [
+        "Olive Oil",
+        "Coconut Oil",
+        "Shea Butter"
+      ],
       "benefits": "Gentle cleansing, moisturizing, suitable for all skin types",
       "inStock": true,
       "featured": false
@@ -64,10 +81,14 @@
       "id": "lavender-soap",
       "name": "Lavender Dreams Soap",
       "category": "Soaps",
-      "price": 20.00,
-      "image": "https://images.unsplash.com/photo-1585128903994-ee075d6e6b99?w=600&q=80",
+      "price": 20,
+      "image": "assets/images/products/lavender-soap.jpg",
       "description": "Calming lavender soap that soothes the mind and nourishes the skin.",
-      "ingredients": ["Lavender Essential Oil", "Olive Oil", "Coconut Oil"],
+      "ingredients": [
+        "Lavender Essential Oil",
+        "Olive Oil",
+        "Coconut Oil"
+      ],
       "benefits": "Relaxing, moisturizing, aromatherapy benefits",
       "inStock": true,
       "featured": false
@@ -76,10 +97,14 @@
       "id": "honey-oat-soap",
       "name": "Honey & Oat Soap",
       "category": "Soaps",
-      "price": 22.00,
-      "image": "https://images.unsplash.com/photo-1620916420992-6f9c53d96c4f?w=600&q=80",
+      "price": 22,
+      "image": "assets/images/products/honey-oat-soap.jpg",
       "description": "Gentle exfoliating soap with organic honey and colloidal oats.",
-      "ingredients": ["Raw Honey", "Colloidal Oats", "Olive Oil"],
+      "ingredients": [
+        "Raw Honey",
+        "Colloidal Oats",
+        "Olive Oil"
+      ],
       "benefits": "Gentle exfoliation, moisturizing, soothing",
       "inStock": true,
       "featured": false
@@ -88,10 +113,14 @@
       "id": "radiance-serum",
       "name": "Radiance Serum",
       "category": "Oils",
-      "price": 52.00,
-      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
+      "price": 52,
+      "image": "assets/images/products/radiance-serum.jpg",
       "description": "Brightening serum with vitamin C and natural botanicals for luminous skin.",
-      "ingredients": ["Vitamin C", "Rosehip Oil", "Jojoba Oil"],
+      "ingredients": [
+        "Vitamin C",
+        "Rosehip Oil",
+        "Jojoba Oil"
+      ],
       "benefits": "Brightens complexion, evens skin tone, antioxidant protection",
       "inStock": true,
       "featured": true
@@ -100,10 +129,12 @@
       "id": "jade-facial-roller",
       "name": "Jade Facial Roller",
       "category": "Sets",
-      "price": 35.00,
-      "image": "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&q=80",
+      "price": 35,
+      "image": "assets/images/products/jade-facial-roller.jpg",
       "description": "Authentic jade roller for facial massage and lymphatic drainage.",
-      "ingredients": ["100% Natural Jade Stone"],
+      "ingredients": [
+        "100% Natural Jade Stone"
+      ],
       "benefits": "Reduces puffiness, improves circulation, promotes relaxation",
       "inStock": true,
       "featured": false
@@ -112,10 +143,14 @@
       "id": "essential-oils-set",
       "name": "Essential Oils Collection",
       "category": "Sets",
-      "price": 68.00,
-      "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
+      "price": 68,
+      "image": "assets/images/products/essential-oils-set.jpg",
       "description": "Curated set of three signature oils: Argan, Rosehip, and Jojoba.",
-      "ingredients": ["Argan Oil", "Rosehip Oil", "Jojoba Oil"],
+      "ingredients": [
+        "Argan Oil",
+        "Rosehip Oil",
+        "Jojoba Oil"
+      ],
       "benefits": "Complete skincare routine, multi-purpose oils, travel-friendly",
       "inStock": true,
       "featured": true
@@ -124,10 +159,12 @@
       "id": "soap-gift-set",
       "name": "Artisan Soap Collection",
       "category": "Sets",
-      "price": 55.00,
-      "image": "https://images.unsplash.com/photo-1600857544200-242c25f7168a?w=600&q=80",
+      "price": 55,
+      "image": "assets/images/products/soap-gift-set.jpg",
       "description": "Beautiful gift set featuring four handcrafted artisan soaps.",
-      "ingredients": ["Variety of Natural Oils and Botanicals"],
+      "ingredients": [
+        "Variety of Natural Oils and Botanicals"
+      ],
       "benefits": "Perfect gift, variety of scents, eco-friendly packaging",
       "inStock": true,
       "featured": false
@@ -136,10 +173,14 @@
       "id": "night-repair-oil",
       "name": "Night Repair Oil",
       "category": "Oils",
-      "price": 48.00,
-      "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80",
+      "price": 48,
+      "image": "assets/images/products/night-repair-oil.jpg",
       "description": "Intensive overnight treatment oil to repair and regenerate skin while you sleep.",
-      "ingredients": ["Rosehip Oil", "Vitamin E", "Evening Primrose Oil"],
+      "ingredients": [
+        "Rosehip Oil",
+        "Vitamin E",
+        "Evening Primrose Oil"
+      ],
       "benefits": "Overnight repair, reduces fine lines, deep nourishment",
       "inStock": true,
       "featured": false
