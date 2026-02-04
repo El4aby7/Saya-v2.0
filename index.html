@@ -15,9 +15,14 @@
     <script type="module">
       import { React, ReactDOM } from './assets/js/utils.js';
       import HomePage from './assets/js/pages/home.js';
+      import { LanguageProvider } from './assets/js/LanguageContext.js';
 
       const root = ReactDOM.createRoot(document.getElementById('root'));
-      root.render(React.createElement(HomePage));
+      root.render(
+        React.createElement(LanguageProvider, null,
+            React.createElement(HomePage)
+        )
+      );
     </script>
 </body>
 </html>

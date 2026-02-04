@@ -1,38 +1,30 @@
 # Saya Natural Beauty Website
 
-This is a **Multi-Page Application (MPA)** for Saya Natural Beauty, built with React (via CDN) and Tailwind CSS. It uses separate HTML files for each page while maintaining a component-based structure.
+This is a **Multi-Page Application (MPA)** for Saya Natural Beauty, built with React (via CDN) and Tailwind CSS. It supports **English** and **Arabic** languages with full RTL support.
 
 ## 📁 Project Structure
 
-*   **`index.html`**: Home page.
-*   **`shop.html`**: Products catalog page.
-*   **`about.html`**: Brand story page.
-*   **`reviews.html`**: Customer reviews page.
-*   **`contact.html`**: Contact form page.
-*   **`product-detail.html`**: Template for viewing a single product (uses `?id=...`).
-*   **`products.json`**: Data source for products and reviews.
+*   **`index.html`**, **`shop.html`**, etc.: Entry point HTML files for each page.
+*   **`products.json`**: Data source for products and reviews (contains both English and Arabic content).
 *   **`assets/`**:
-    *   **`images/`**: Contains all product and hero images.
+    *   **`images/`**: Product and site images.
     *   **`css/`**: Custom styles (`styles.css`).
     *   **`js/`**:
-        *   `utils.js`: Shared React imports and data loading logic.
-        *   `tailwind-config.js`: Tailwind CSS configuration.
-        *   `components/`: Shared components like `Navigation` and `Footer`.
-        *   `pages/`: Logic for each specific page (`home.js`, `shop.js`, etc.).
+        *   `translations.js`: Dictionary for static UI text (Buttons, Headers, Menus).
+        *   `LanguageContext.js`: Manages language state (`en`/`ar`) and direction (`ltr`/`rtl`).
+        *   `utils.js`: Shared helpers (Currency formatting, Data loading).
+        *   `components/`: Shared components (`Navigation`, `Footer`, `Layout`).
+        *   `pages/`: Page-specific logic (`home.js`, `shop.js`, etc.).
 
 ## 🚀 How to Run
 
-Since this project uses ES Modules (`type="module"`), you cannot run it directly by opening the HTML files in a browser from your file system (due to CORS policies).
-
-**You must serve it using a local web server.**
+Because this project uses ES Modules, you must run it on a local server (CORS restriction).
 
 ### Option 1: VS Code Live Server
-1.  Install the "Live Server" extension in VS Code.
-2.  Right-click `index.html`.
-3.  Select "Open with Live Server".
+1.  Install the "Live Server" extension.
+2.  Right-click `index.html` -> "Open with Live Server".
 
 ### Option 2: Python
-Run this command in the project folder:
 ```bash
 python3 -m http.server
 ```
@@ -40,25 +32,51 @@ Then open `http://localhost:8000`.
 
 ## 🛠️ How to Edit
 
-### Changing Text
-*   **Page Content**: Edit the corresponding JavaScript file in `assets/js/pages/`.
-    *   Home: `assets/js/pages/home.js`
-    *   About: `assets/js/pages/about.js`
-    *   Contact: `assets/js/pages/contact.js`
-*   **Navigation/Footer**: Edit `assets/js/components/Navigation.js` or `Footer.js`.
+### 1. Changing Text (Translations)
+The site handles two types of text: **Static** (UI elements) and **Dynamic** (Products/Reviews).
 
-### Managing Products
-Edit `products.json`.
-*   **Add a Product**: Copy an existing product block and paste it into the list. Ensure the `id` is unique.
-*   **Edit Details**: Change price, description, etc. directly in the JSON.
-*   **Images**:
-    1.  Add your image file to `assets/images/products/`.
-    2.  Update the `image` field in `products.json` to match the path (e.g., `assets/images/products/my-new-soap.jpg`).
+#### Static Text (Buttons, Menus, Headers)
+*   Open **`assets/js/translations.js`**.
+*   This file contains a dictionary with `en` and `ar` keys.
+*   Example:
+    ```javascript
+    export const translations = {
+        en: {
+            nav: { home: "Home", shop: "Shop" }
+        },
+        ar: {
+            nav: { home: "الرئيسية", shop: "تسوق" }
+        }
+    };
+    ```
+*   To edit, simply change the text inside the quotes.
 
-### Changing Images
-*   **Product Images**: See above.
-*   **Hero Image**: Replace `assets/images/hero.jpg` with your new image (keep the same name) OR update `assets/js/pages/home.js` to point to a new filename.
+#### Dynamic Data (Products & Reviews)
+*   Open **`products.json`**.
+*   Each item has base fields (English) and `_ar` fields (Arabic).
+*   **Example**:
+    ```json
+    {
+      "id": 1,
+      "name": "Lavender Soap",
+      "name_ar": "صابون اللافندر",
+      "description": "Soothing...",
+      "description_ar": "مهدئ...",
+      "price": 35
+    }
+    ```
+*   **To Add a Product**: Copy a block, paste it, and fill in both English and `_ar` fields.
+*   **Currency**: The currency symbol (L.E / ج.م) is applied automatically based on the selected language.
+*   **Language Toggle**: A button ('AR' / 'EN') is available in the top navigation bar (next to the dark mode toggle) to switch between English and Arabic.
 
-## 🎨 Styling
-*   **Tailwind Config**: Edit `assets/js/tailwind-config.js` to change colors, fonts, or theme settings.
-*   **Custom CSS**: Edit `assets/css/styles.css`.
+### 2. Changing Images
+*   **Product Images**:
+    1.  Place the new image in `assets/images/products/`.
+    2.  Update the `image` path in `products.json`.
+*   **Hero/Static Images**:
+    1.  Place the image in `assets/images/`.
+    2.  Update the reference in the relevant page file (e.g., `assets/js/pages/home.js`).
+
+### 3. Styling
+*   **Tailwind Config**: `assets/js/tailwind-config.js` (Colors, Fonts).
+*   **Custom CSS**: `assets/css/styles.css`.

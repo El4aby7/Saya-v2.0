@@ -14,7 +14,16 @@
       ],
       "benefits": "Deep hydration & repair, antioxidant shield, evening glow",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "name_ar": "إكسير الزيتون المشرق",
+      "category_ar": "زيوت",
+      "description_ar": "مصل مجدد نقي لجمال خالد. انغمسي في الذهب السائل للبحر الأبيض المتوسط.",
+      "ingredients_ar": [
+        "سكوالين الزيتون",
+        "حمض الهيالورونيك",
+        "فيتامين هـ"
+      ],
+      "benefits_ar": "ترطيب عميق وإصلاح، درع مضاد للأكسدة، توهج مسائي"
     },
     {
       "id": "argan-oil",
@@ -28,7 +37,14 @@
       ],
       "benefits": "Moisturizes skin, strengthens hair, anti-aging properties",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "name_ar": "زيت الأركان النقي",
+      "category_ar": "زيوت",
+      "description_ar": "الذهب السائل من المغرب. غني بمضادات الأكسدة وفيتامين هـ لتغذية الشعر والبشرة.",
+      "ingredients_ar": [
+        "100% زيت أركان نقي"
+      ],
+      "benefits_ar": "يرطب البشرة، يقوي الشعر، خصائص مضادة للشيخوخة"
     },
     {
       "id": "damascus-rose-mist",
@@ -43,7 +59,15 @@
       ],
       "benefits": "Hydrates, tones, balances pH, calms irritation",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "رذاذ الورد الدمشقي",
+      "category_ar": "علاجات",
+      "description_ar": "تونر ماء الورد المنعش الذي يرطب ويوازن درجة حموضة بشرتك.",
+      "ingredients_ar": [
+        "ماء الورد الدمشقي",
+        "جليسرين"
+      ],
+      "benefits_ar": "يرطب، يوحد اللون، يوازن الحموضة، يهدئ التهيج"
     },
     {
       "id": "clay-mask",
@@ -59,7 +83,16 @@
       ],
       "benefits": "Deep cleansing, unclogs pores, brightens complexion",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "قناع الطين المغربي",
+      "category_ar": "علاجات",
+      "description_ar": "قناع تنظيف عميق بالطين المغربي الأصيل لإزالة السموم والتنقية.",
+      "ingredients_ar": [
+        "طين مغربي",
+        "ماء ورد",
+        "زيت أركان"
+      ],
+      "benefits_ar": "تنظيف عميق، يفتح المسام، يفتح البشرة"
     },
     {
       "id": "traditional-soap",
@@ -75,7 +108,16 @@
       ],
       "benefits": "Gentle cleansing, moisturizing, suitable for all skin types",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "الصابون التقليدي",
+      "category_ar": "صابون",
+      "description_ar": "صابون زيت الزيتون المصنوع يدوياً باتباع التقاليد المغربية القديمة.",
+      "ingredients_ar": [
+        "زيت زيتون",
+        "زيت جوز الهند",
+        "زبدة الشيا"
+      ],
+      "benefits_ar": "تنظيف لطيف، ترطيب، مناسب لجميع أنواع البشرة"
     },
     {
       "id": "lavender-soap",
@@ -91,7 +133,16 @@
       ],
       "benefits": "Relaxing, moisturizing, aromatherapy benefits",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "صابون أحلام اللافندر",
+      "category_ar": "صابون",
+      "description_ar": "صابون اللافندر المهدئ الذي يريح العقل ويغذي البشرة.",
+      "ingredients_ar": [
+        "زيت اللافندر العطري",
+        "زيت زيتون",
+        "زيت جوز الهند"
+      ],
+      "benefits_ar": "استرخاء، ترطيب، فوائد العلاج العطري"
     },
     {
       "id": "honey-oat-soap",
@@ -107,7 +158,16 @@
       ],
       "benefits": "Gentle exfoliation, moisturizing, soothing",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "صابون العسل والشوفان",
+      "category_ar": "صابون",
+      "description_ar": "صابون تقشير لطيف بالعسل العضوي والشوفان الغروي.",
+      "ingredients_ar": [
+        "عسل خام",
+        "شوفان غروي",
+        "زيت زيتون"
+      ],
+      "benefits_ar": "تقشير لطيف، ترطيب، مهدئ"
     },
     {
       "id": "radiance-serum",
@@ -123,7 +183,16 @@
       ],
       "benefits": "Brightens complexion, evens skin tone, antioxidant protection",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "name_ar": "سيروم النضارة",
+      "category_ar": "زيوت",
+      "description_ar": "سيروم مفتح بفيتامين سي والنباتات الطبيعية لبشرة مضيئة.",
+      "ingredients_ar": [
+        "فيتامين سي",
+        "زيت ثمر الورد",
+        "زيت الجوجوبا"
+      ],
+      "benefits_ar": "يفتح البشرة، يوحد اللون، حماية مضادة للأكسدة"
     },
     {
       "id": "jade-facial-roller",
@@ -137,7 +206,14 @@
       ],
       "benefits": "Reduces puffiness, improves circulation, promotes relaxation",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "أسطوانة اليشم للوجه",
+      "category_ar": "مجموعات",
+      "description_ar": "أسطوانة يشم أصلية لتدليك الوجه والتصريف اللمفاوي.",
+      "ingredients_ar": [
+        "حجر يشم طبيعي 100%"
+      ],
+      "benefits_ar": "يقلل الانتفاخ، يحسن الدورة الدموية، يعزز الاسترخاء"
     },
     {
       "id": "essential-oils-set",
@@ -153,7 +229,16 @@
       ],
       "benefits": "Complete skincare routine, multi-purpose oils, travel-friendly",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "name_ar": "مجموعة الزيوت الأساسية",
+      "category_ar": "مجموعات",
+      "description_ar": "مجموعة مختارة من ثلاثة زيوت مميزة: الأركان، وثمر الورد، والجوجوبا.",
+      "ingredients_ar": [
+        "زيت أركان",
+        "زيت ثمر الورد",
+        "زيت الجوجوبا"
+      ],
+      "benefits_ar": "روتين كامل للعناية بالبشرة، زيوت متعددة الاستخدامات، مناسبة للسفر"
     },
     {
       "id": "soap-gift-set",
@@ -167,7 +252,14 @@
       ],
       "benefits": "Perfect gift, variety of scents, eco-friendly packaging",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "مجموعة الصابون الحرفي",
+      "category_ar": "مجموعات",
+      "description_ar": "طقم هدايا جميل يضم أربعة أنواع من الصابون الحرفي المصنوع يدوياً.",
+      "ingredients_ar": [
+        "مجموعة متنوعة من الزيوت الطبيعية والنباتات"
+      ],
+      "benefits_ar": "هدية مثالية، روائح متنوعة، تغليف صديق للبيئة"
     },
     {
       "id": "night-repair-oil",
@@ -183,7 +275,16 @@
       ],
       "benefits": "Overnight repair, reduces fine lines, deep nourishment",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "زيت الإصلاح الليلي",
+      "category_ar": "زيوت",
+      "description_ar": "زيت علاج ليلي مكثف لإصلاح وتجديد البشرة أثناء النوم.",
+      "ingredients_ar": [
+        "زيت ثمر الورد",
+        "فيتامين هـ",
+        "زيت زهرة الربيع المسائية"
+      ],
+      "benefits_ar": "إصلاح ليلي، يقلل الخطوط الدقيقة، تغذية عميقة"
     }
   ],
   "reviews": [
@@ -195,7 +296,10 @@
       "product": "Radiant Olive Elixir",
       "comment": "I've tried countless luxury serums, but nothing calms my skin like Saya's Olive Elixir. It feels incredibly grounding and natural.",
       "verified": true,
-      "date": "2024-01-15"
+      "date": "2024-01-15",
+      "name_ar": "سارة جينكينز",
+      "location_ar": "London, UK",
+      "comment_ar": "لقد جربت عددًا لا يحصى من الأمصال الفاخرة، لكن لا شيء يهدئ بشرتي مثل إكسير الزيتون من صايا. إنه يعطي شعورًا بالثبات والطبيعية بشكل لا يصدق."
     },
     {
       "id": 2,
@@ -205,7 +309,10 @@
       "product": "Pure Argan Oil",
       "comment": "Being from Morocco, I know good Argan oil when I see it. Saya delivers the real deal. The packaging is beautiful too, makes for a great gift.",
       "verified": true,
-      "date": "2024-01-10"
+      "date": "2024-01-10",
+      "name_ar": "أميرة م.",
+      "location_ar": "Dubai, UAE",
+      "comment_ar": "لأني من المغرب، أعرف زيت الأركان الجيد عندما أراه. صايا تقدم المنتج الحقيقي. العبوة جميلة أيضًا، مما يجعلها هدية رائعة."
     },
     {
       "id": 3,
@@ -215,7 +322,10 @@
       "product": "Radiance Serum",
       "comment": "I never knew natural skincare could be this effective. The anti-aging results are visible after just one month.",
       "verified": true,
-      "date": "2024-01-08"
+      "date": "2024-01-08",
+      "name_ar": "ليام كارتر",
+      "location_ar": "Sydney, AU",
+      "comment_ar": "لم أكن أعلم أبدًا أن العناية بالبشرة الطبيعية يمكن أن تكون بهذه الفعالية. نتائج مكافحة الشيخوخة واضحة بعد شهر واحد فقط."
     },
     {
       "id": 4,
@@ -225,7 +335,10 @@
       "product": "Traditional Savon",
       "comment": "Just buy it. Your skin will thank you later. The texture is divine.",
       "verified": true,
-      "date": "2024-01-05"
+      "date": "2024-01-05",
+      "name_ar": "فاطمة الزهراء",
+      "location_ar": "Cairo, EG",
+      "comment_ar": "فقط اشتريه. ستشكرك بشرتك لاحقًا. الملمس رائع."
     },
     {
       "id": 5,
@@ -235,7 +348,10 @@
       "product": "Traditional Savon",
       "comment": "The Seven d'Encens soap is magic. The texture is incredibly smooth and it lathers my skin feeling renewed and stripped. You can tell the quality ingredients are used. Highly recommend for sensitive skin types.",
       "verified": true,
-      "date": "2023-12-28"
+      "date": "2023-12-28",
+      "name_ar": "كريم ح.",
+      "location_ar": "Paris, FR",
+      "comment_ar": "صابون البخور السبعة سحري. الملمس ناعم بشكل لا يصدق ويجدد بشرتي. يمكنك معرفة أن المكونات عالية الجودة مستخدمة. أوصي به بشدة لأنواع البشرة الحساسة."
     },
     {
       "id": 6,
@@ -245,7 +361,10 @@
       "product": "Moroccan Clay Mask",
       "comment": "Obsessed.",
       "verified": false,
-      "date": "2023-12-20"
+      "date": "2023-12-20",
+      "name_ar": "ليتيا",
+      "location_ar": "New York, US",
+      "comment_ar": "مهووسة به."
     },
     {
       "id": 7,
@@ -255,7 +374,10 @@
       "product": "Damascus Rose Mist",
       "comment": "Gentle on my skin. The soap lather is rich and creamy. It doesn't have that strong artificial scent, just a light natural scent. Very refreshing.",
       "verified": true,
-      "date": "2023-12-15"
+      "date": "2023-12-15",
+      "name_ar": "رانيا",
+      "location_ar": "Casablanca, MA",
+      "comment_ar": "لطيف على بشرتي. رغوة الصابون غنية وكريمية. ليس له تلك الرائحة الاصطناعية القوية، مجرد رائحة طبيعية خفيفة. منعش جدا."
     }
   ]
 }
