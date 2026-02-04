@@ -67,6 +67,7 @@ The site handles two types of text: **Static** (UI elements) and **Dynamic** (Pr
     ```
 *   **To Add a Product**: Copy a block, paste it, and fill in both English and `_ar` fields.
 *   **Currency**: The currency symbol (L.E / ج.م) is applied automatically based on the selected language.
+*   **Language Toggle**: A button ('AR' / 'EN') is available in the top navigation bar (next to the dark mode toggle) to switch between English and Arabic.
 
 ### 2. Changing Images
 *   **Product Images**:
