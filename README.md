@@ -1,314 +1,64 @@
-# 🎉 YOUR SAYA WEBSITE - COMPLETE SETUP GUIDE
+# Saya Natural Beauty Website
 
-## 📦 WHAT YOU HAVE
+This is a **Multi-Page Application (MPA)** for Saya Natural Beauty, built with React (via CDN) and Tailwind CSS. It uses separate HTML files for each page while maintaining a component-based structure.
 
-You now have a **fully working React website** with:
+## 📁 Project Structure
 
-✅ Home page with hero section
-✅ Products page with search, filter, and sort
-✅ Product detail pages
-✅ About page with your story
-✅ Reviews page showing customer testimonials
-✅ Contact page with form
-✅ Dark mode toggle
-✅ Mobile responsive design
-✅ All navigation working
-✅ Products stored in easy-to-edit JSON file
+*   **`index.html`**: Home page.
+*   **`shop.html`**: Products catalog page.
+*   **`about.html`**: Brand story page.
+*   **`reviews.html`**: Customer reviews page.
+*   **`contact.html`**: Contact form page.
+*   **`product-detail.html`**: Template for viewing a single product (uses `?id=...`).
+*   **`products.json`**: Data source for products and reviews.
+*   **`assets/`**:
+    *   **`images/`**: Contains all product and hero images.
+    *   **`css/`**: Custom styles (`styles.css`).
+    *   **`js/`**:
+        *   `utils.js`: Shared React imports and data loading logic.
+        *   `tailwind-config.js`: Tailwind CSS configuration.
+        *   `components/`: Shared components like `Navigation` and `Footer`.
+        *   `pages/`: Logic for each specific page (`home.js`, `shop.js`, etc.).
 
----
+## 🚀 How to Run
 
-## 📁 FILES YOU NEED
+Since this project uses ES Modules (`type="module"`), you cannot run it directly by opening the HTML files in a browser from your file system (due to CORS policies).
 
-You have **2 files** to upload:
+**You must serve it using a local web server.**
 
-1. **index.html** - Your complete website
-2. **products.json** - All your product and review data
+### Option 1: VS Code Live Server
+1.  Install the "Live Server" extension in VS Code.
+2.  Right-click `index.html`.
+3.  Select "Open with Live Server".
 
----
-
-## 🚀 STEP-BY-STEP: UPLOAD TO GITHUB PAGES
-
-### STEP 1: Go to GitHub
-
-1. Open your web browser
-2. Go to https://github.com
-3. Log in to your account (or create one if you don't have it)
-
----
-
-### STEP 2: Create a New Repository
-
-1. Click the **green "New"** button (top left, or go to https://github.com/new)
-2. Repository name: Type `saya-website` (or any name you want)
-3. Description: Type `Saya Natural Beauty Website` (optional)
-4. Make sure it's set to **Public**
-5. ✅ Check the box that says **"Add a README file"**
-6. Click the **green "Create repository"** button at the bottom
-
----
-
-### STEP 3: Upload Your Files
-
-1. You should now be on your repository page
-2. Click **"Add file"** button (near the top right)
-3. Click **"Upload files"** from dropdown
-4. **Drag and drop** both files:
-   - `index.html`
-   - `products.json`
-5. Or click **"choose your files"** and select them
-6. Scroll down and click the **green "Commit changes"** button
-
----
-
-### STEP 4: Enable GitHub Pages
-
-1. Click on **"Settings"** tab (top of your repository page)
-2. Scroll down the left sidebar and click **"Pages"**
-3. Under "Source" (or "Branch"), select **"main"** from the dropdown
-4. Click **"Save"**
-5. Wait 1-2 minutes for it to build
-
----
-
-### STEP 5: Find Your Website URL
-
-1. Stay on the Pages settings page
-2. At the top, you'll see a message like:
-   **"Your site is live at https://YOUR-USERNAME.github.io/saya-website/"**
-3. Click that link!
-4. **BOOKMARK IT** - this is your website URL!
-
----
-
-## 🎨 HOW TO EDIT YOUR PRODUCTS
-
-### To Change Product Information:
-
-1. Go to your GitHub repository
-2. Click on **products.json** file
-3. Click the **pencil icon** (✏️) to edit
-4. Make your changes (see guide below)
-5. Scroll down and click **"Commit changes"**
-6. Wait 1-2 minutes and refresh your website
-
-### Product Fields Explained:
-
-```json
-{
-  "id": "unique-name-no-spaces",          ← Used in URL, don't change
-  "name": "Product Display Name",          ← What visitors see
-  "category": "Oils",                      ← Must be: Oils, Soaps, Treatments, or Sets
-  "price": 45.00,                          ← Number only (no $ symbol)
-  "image": "https://...",                  ← URL to image (see below)
-  "description": "Short description",      ← Main product description
-  "ingredients": ["Item 1", "Item 2"],     ← List of ingredients
-  "benefits": "What it does",              ← Benefits text
-  "inStock": true,                         ← true or false
-  "featured": true                         ← true = shows on homepage
-}
+### Option 2: Python
+Run this command in the project folder:
+```bash
+python3 -m http.server
 ```
+Then open `http://localhost:8000`.
 
----
+## 🛠️ How to Edit
 
-## 🖼️ HOW TO CHANGE PRODUCT IMAGES
+### Changing Text
+*   **Page Content**: Edit the corresponding JavaScript file in `assets/js/pages/`.
+    *   Home: `assets/js/pages/home.js`
+    *   About: `assets/js/pages/about.js`
+    *   Contact: `assets/js/pages/contact.js`
+*   **Navigation/Footer**: Edit `assets/js/components/Navigation.js` or `Footer.js`.
 
-### Option 1: Use Unsplash (Free, Easy)
+### Managing Products
+Edit `products.json`.
+*   **Add a Product**: Copy an existing product block and paste it into the list. Ensure the `id` is unique.
+*   **Edit Details**: Change price, description, etc. directly in the JSON.
+*   **Images**:
+    1.  Add your image file to `assets/images/products/`.
+    2.  Update the `image` field in `products.json` to match the path (e.g., `assets/images/products/my-new-soap.jpg`).
 
-1. Go to https://unsplash.com
-2. Search for your product type (e.g., "argan oil")
-3. Click on an image you like
-4. Click the **"..."** button (top right)
-5. Click **"Copy link"**
-6. Paste into the "image" field in products.json
+### Changing Images
+*   **Product Images**: See above.
+*   **Hero Image**: Replace `assets/images/hero.jpg` with your new image (keep the same name) OR update `assets/js/pages/home.js` to point to a new filename.
 
-### Option 2: Upload Your Own Images
-
-1. Go to https://imgur.com (free image hosting)
-2. Click **"New post"**
-3. Upload your image
-4. Right-click the uploaded image
-5. Click **"Copy image address"**
-6. Paste into the "image" field in products.json
-
----
-
-## 🛠️ HOW TO CHANGE TEXT ON PAGES
-
-All text is in the **index.html** file. Here's where to find common things:
-
-### Hero Section (Top of homepage):
-- Look for: `'Unveiling'`
-- Change the text in quotes
-
-### About Page:
-- Look for: `'Our Story'`
-- Change the paragraphs below it
-
-### Contact Info:
-- Look for: `'Contact Information'`
-- Change email, phone, address
-
-### To Edit:
-1. Go to your repository on GitHub
-2. Click **index.html**
-3. Click the **pencil icon** (✏️)
-4. Use Ctrl+F (or Cmd+F on Mac) to search for text
-5. Make changes carefully (keep quotes and commas!)
-6. Click **"Commit changes"**
-
----
-
-## ✏️ ADDING NEW PRODUCTS
-
-1. Open **products.json** on GitHub
-2. Click edit (pencil icon)
-3. Find the last product in the list
-4. Copy everything from `{` to `}` for one product
-5. Add a comma after the previous product
-6. Paste your copy
-7. Change all the details
-8. Save (commit changes)
-
-**Example:**
-
-```json
-{
-  "products": [
-    {
-      "id": "existing-product",
-      "name": "Existing Product",
-      ...
-    },  ← Make sure there's a comma here!
-    {
-      "id": "new-product",
-      "name": "New Product Name",
-      "category": "Oils",
-      "price": 40.00,
-      "image": "https://images.unsplash.com/...",
-      "description": "Amazing new product",
-      "ingredients": ["Ingredient 1"],
-      "benefits": "Great benefits",
-      "inStock": true,
-      "featured": false
-    }
-  ]
-}
-```
-
----
-
-## 🐛 COMMON MISTAKES & HOW TO FIX
-
-### ❌ Website shows blank page
-**Fix:** Make sure index.html is in the ROOT of your repository (not in a folder)
-
-### ❌ Products don't show
-**Fix:** Check products.json for syntax errors (missing commas, quotes)
-
-### ❌ Changes don't appear
-**Fix:** Wait 2-3 minutes after committing, then hard refresh (Ctrl+Shift+R or Cmd+Shift+R)
-
-### ❌ Image doesn't show
-**Fix:** Make sure image URL starts with `https://` and ends with image extension (.jpg, .png)
-
----
-
-## 📝 EDITING REVIEWS
-
-In **products.json**, scroll to the `"reviews"` section:
-
-```json
-{
-  "id": 1,
-  "name": "Customer Name",
-  "location": "City, Country",
-  "rating": 5,                    ← 1 to 5
-  "product": "Product Name",
-  "comment": "Review text here",
-  "verified": true,               ← true or false
-  "date": "2024-01-15"           ← YYYY-MM-DD format
-}
-```
-
----
-
-## 🎯 WHAT WORKS VS WHAT DOESN'T
-
-### ✅ WORKS (All Free):
-- Displaying products
-- Search and filters
-- Navigation between pages
-- Contact form (shows alert, doesn't send email yet)
-- Newsletter signup (shows alert, doesn't send email yet)
-- Dark mode
-- Mobile responsive
-
-### 🔧 NEEDS EXTERNAL SERVICE (We can add later):
-- Actually sending contact form emails
-- Actually sending newsletter emails
-- Shopping cart that saves items
-- User accounts
-- Payment processing
-
----
-
-## 🆘 NEED HELP?
-
-### If something doesn't work:
-
-1. **Check the browser console:**
-   - Right-click on your website
-   - Click "Inspect" or "Inspect Element"
-   - Click "Console" tab
-   - Look for red errors
-   - Copy the error and search Google
-
-2. **Common issues:**
-   - Missing comma in JSON = syntax error
-   - Wrong image URL = broken image
-   - Wrong category name = product won't filter correctly
-
----
-
-## 🔮 WHAT'S NEXT? (Future Enhancements)
-
-When you're ready, we can add:
-
-1. **Real Email Forms** (using FormSubmit or EmailJS - FREE)
-2. **Shopping Cart** (using LocalStorage - already works in browser)
-3. **Newsletter System** (using Mailchimp - FREE tier)
-4. **Google Analytics** (track visitors - FREE)
-5. **Custom Domain** (yourdomain.com instead of github.io)
-
----
-
-## 💡 PRO TIPS
-
-1. **Always test locally first:** Download both files, open index.html in browser
-2. **Make small changes:** Don't edit everything at once
-3. **Keep backups:** Download your files before major changes
-4. **Use proper image sizes:** 800x800px for product images works great
-5. **Check on mobile:** View your site on your phone after changes
-
----
-
-## 🎉 YOU'RE DONE!
-
-Your website is now LIVE and working! 
-
-**Share your link:**
-`https://YOUR-USERNAME.github.io/saya-website/`
-
----
-
-## 📞 Quick Reference
-
-- **Your files:** index.html + products.json
-- **Upload location:** GitHub repository root
-- **Settings:** Settings → Pages → Branch: main
-- **Wait time:** 1-2 minutes after each change
-- **Force refresh:** Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)
-
----
-
-**Congratulations! You now have a professional, working website! 🎊**
+## 🎨 Styling
+*   **Tailwind Config**: Edit `assets/js/tailwind-config.js` to change colors, fonts, or theme settings.
+*   **Custom CSS**: Edit `assets/css/styles.css`.
