@@ -10,7 +10,16 @@
       "ingredients": ["100% Pure Bitter Almond Oil"],
       "benefits": "Deep hydration, brightens dark circles, anti-aging properties",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "name_ar": "إكسير الزيتون المشرق",
+      "category_ar": "زيوت",
+      "description_ar": "مصل مجدد نقي لجمال خالد. انغمسي في الذهب السائل للبحر الأبيض المتوسط.",
+      "ingredients_ar": [
+        "سكوالين الزيتون",
+        "حمض الهيالورونيك",
+        "فيتامين هـ"
+      ],
+      "benefits_ar": "ترطيب عميق وإصلاح، درع مضاد للأكسدة، توهج مسائي"
     },
     {
       "id": "castor-oil",
@@ -22,7 +31,14 @@
       "ingredients": ["100% Pure Castor Oil"],
       "benefits": "Promotes hair growth, thickens lashes/brows, deep moisturization",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "name_ar": "زيت الأركان النقي",
+      "category_ar": "زيوت",
+      "description_ar": "الذهب السائل من المغرب. غني بمضادات الأكسدة وفيتامين هـ لتغذية الشعر والبشرة.",
+      "ingredients_ar": [
+        "100% زيت أركان نقي"
+      ],
+      "benefits_ar": "يرطب البشرة، يقوي الشعر، خصائص مضادة للشيخوخة"
     },
     {
       "id": "coconut-oil",
@@ -34,7 +50,15 @@
       "ingredients": ["100% Pure Coconut Oil"],
       "benefits": "Intensive hair repair, skin hydration, makeup remover",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "رذاذ الورد الدمشقي",
+      "category_ar": "علاجات",
+      "description_ar": "تونر ماء الورد المنعش الذي يرطب ويوازن درجة حموضة بشرتك.",
+      "ingredients_ar": [
+        "ماء الورد الدمشقي",
+        "جليسرين"
+      ],
+      "benefits_ar": "يرطب، يوحد اللون، يوازن الحموضة، يهدئ التهيج"
     },
     {
       "id": "coxix-intimate-wash",
@@ -46,7 +70,16 @@
       "ingredients": ["Aqua", "Aloe Vera Extract", "Menthol", "Lactic Acid"],
       "benefits": "pH balanced, cooling effect, gentle cleansing",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "قناع الطين المغربي",
+      "category_ar": "علاجات",
+      "description_ar": "قناع تنظيف عميق بالطين المغربي الأصيل لإزالة السموم والتنقية.",
+      "ingredients_ar": [
+        "طين مغربي",
+        "ماء ورد",
+        "زيت أركان"
+      ],
+      "benefits_ar": "تنظيف عميق، يفتح المسام، يفتح البشرة"
     },
     {
       "id": "garlic-oil",
@@ -58,7 +91,16 @@
       "ingredients": ["Garlic Oil Extract", "Carrier Oil"],
       "benefits": "Strengthens hair follicles, reduces shedding, stimulates scalp",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "الصابون التقليدي",
+      "category_ar": "صابون",
+      "description_ar": "صابون زيت الزيتون المصنوع يدوياً باتباع التقاليد المغربية القديمة.",
+      "ingredients_ar": [
+        "زيت زيتون",
+        "زيت جوز الهند",
+        "زبدة الشيا"
+      ],
+      "benefits_ar": "تنظيف لطيف، ترطيب، مناسب لجميع أنواع البشرة"
     },
     {
       "id": "grape-seed-oil",
@@ -82,7 +124,16 @@
       "ingredients": ["100% Pure Simmondsia Chinensis (Jojoba) Oil"],
       "benefits": "Balances oil production, mimics natural sebum, long-lasting hydration",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "صابون العسل والشوفان",
+      "category_ar": "صابون",
+      "description_ar": "صابون تقشير لطيف بالعسل العضوي والشوفان الغروي.",
+      "ingredients_ar": [
+        "عسل خام",
+        "شوفان غروي",
+        "زيت زيتون"
+      ],
+      "benefits_ar": "تقشير لطيف، ترطيب، مهدئ"
     },
     {
       "id": "kenta-creme",
@@ -94,7 +145,16 @@
       "ingredients": ["Zinc Oxide", "Olive Oil", "Vitamin E"],
       "benefits": "Soothes irritation, brightens skin tone, gentle formula",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "name_ar": "سيروم النضارة",
+      "category_ar": "زيوت",
+      "description_ar": "سيروم مفتح بفيتامين سي والنباتات الطبيعية لبشرة مضيئة.",
+      "ingredients_ar": [
+        "فيتامين سي",
+        "زيت ثمر الورد",
+        "زيت الجوجوبا"
+      ],
+      "benefits_ar": "يفتح البشرة، يوحد اللون، حماية مضادة للأكسدة"
     },
     {
       "id": "mint-oil",
@@ -118,7 +178,14 @@
       "ingredients": ["Shea Butter", "Castor Oil", "Hydrolyzed Protein"],
       "benefits": "Strengthens hair, reduces breakage, promotes growth",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "أسطوانة اليشم للوجه",
+      "category_ar": "مجموعات",
+      "description_ar": "أسطوانة يشم أصلية لتدليك الوجه والتصريف اللمفاوي.",
+      "ingredients_ar": [
+        "حجر يشم طبيعي 100%"
+      ],
+      "benefits_ar": "يقلل الانتفاخ، يحسن الدورة الدموية، يعزز الاسترخاء"
     },
     {
       "id": "moulin-rouge-set",
@@ -130,7 +197,16 @@
       "ingredients": ["Various Natural Ingredients"],
       "benefits": "Complete routine, perfect gift, value set",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "name_ar": "مجموعة الزيوت الأساسية",
+      "category_ar": "مجموعات",
+      "description_ar": "مجموعة مختارة من ثلاثة زيوت مميزة: الأركان، وثمر الورد، والجوجوبا.",
+      "ingredients_ar": [
+        "زيت أركان",
+        "زيت ثمر الورد",
+        "زيت الجوجوبا"
+      ],
+      "benefits_ar": "روتين كامل للعناية بالبشرة، زيوت متعددة الاستخدامات، مناسبة للسفر"
     },
     {
       "id": "mustard-oil",
@@ -154,7 +230,14 @@
       "ingredients": ["Sidr Leaf Extract", "Base Oil"],
       "benefits": "Purifies skin, strengthens hair roots, ancient remedy",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "مجموعة الصابون الحرفي",
+      "category_ar": "مجموعات",
+      "description_ar": "طقم هدايا جميل يضم أربعة أنواع من الصابون الحرفي المصنوع يدوياً.",
+      "ingredients_ar": [
+        "مجموعة متنوعة من الزيوت الطبيعية والنباتات"
+      ],
+      "benefits_ar": "هدية مثالية، روائح متنوعة، تغليف صديق للبيئة"
     },
     {
       "id": "teresia-tone-up",
@@ -178,7 +261,16 @@
       "ingredients": ["100% Pure Melaleuca Alternifolia (Tea Tree) Oil"],
       "benefits": "Combats acne, anti-dandruff, purifying",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "name_ar": "زيت الإصلاح الليلي",
+      "category_ar": "زيوت",
+      "description_ar": "زيت علاج ليلي مكثف لإصلاح وتجديد البشرة أثناء النوم.",
+      "ingredients_ar": [
+        "زيت ثمر الورد",
+        "فيتامين هـ",
+        "زيت زهرة الربيع المسائية"
+      ],
+      "benefits_ar": "إصلاح ليلي، يقلل الخطوط الدقيقة، تغذية عميقة"
     }
   ],
   "reviews": [
@@ -190,7 +282,10 @@
       "product": "Bitter Almond Oil",
       "comment": "This Bitter Almond oil has transformed my under-eye area. Dark circles are visibly reduced!",
       "verified": true,
-      "date": "2024-01-15"
+      "date": "2024-01-15",
+      "name_ar": "سارة جينكينز",
+      "location_ar": "London, UK",
+      "comment_ar": "لقد جربت عددًا لا يحصى من الأمصال الفاخرة، لكن لا شيء يهدئ بشرتي مثل إكسير الزيتون من صايا. إنه يعطي شعورًا بالثبات والطبيعية بشكل لا يصدق."
     },
     {
       "id": 2,
@@ -200,7 +295,10 @@
       "product": "Kenta Creme",
       "comment": "Authentic Kenta cream. Works wonders for sensitive skin. Highly recommend.",
       "verified": true,
-      "date": "2024-01-10"
+      "date": "2024-01-10",
+      "name_ar": "أميرة م.",
+      "location_ar": "Dubai, UAE",
+      "comment_ar": "لأني من المغرب، أعرف زيت الأركان الجيد عندما أراه. صايا تقدم المنتج الحقيقي. العبوة جميلة أيضًا، مما يجعلها هدية رائعة."
     },
     {
       "id": 3,
@@ -210,7 +308,10 @@
       "product": "Teresia Brightening Tone Up Creme",
       "comment": "Amazing instant glow. My skin looks so healthy without makeup.",
       "verified": true,
-      "date": "2024-01-08"
+      "date": "2024-01-08",
+      "name_ar": "ليام كارتر",
+      "location_ar": "Sydney, AU",
+      "comment_ar": "لم أكن أعلم أبدًا أن العناية بالبشرة الطبيعية يمكن أن تكون بهذه الفعالية. نتائج مكافحة الشيخوخة واضحة بعد شهر واحد فقط."
     },
     {
       "id": 4,
@@ -220,7 +321,10 @@
       "product": "Sidr Oil",
       "comment": "The best Sidr oil I've found. Very pure and potent.",
       "verified": true,
-      "date": "2024-01-05"
+      "date": "2024-01-05",
+      "name_ar": "فاطمة الزهراء",
+      "location_ar": "Cairo, EG",
+      "comment_ar": "فقط اشتريه. ستشكرك بشرتك لاحقًا. الملمس رائع."
     },
     {
       "id": 5,
