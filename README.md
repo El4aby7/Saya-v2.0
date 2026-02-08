@@ -16,20 +16,6 @@ This is a **Multi-Page Application (MPA)** for Saya Natural Beauty, built with R
         *   `components/`: Shared components (`Navigation`, `Footer`, `Layout`).
         *   `pages/`: Page-specific logic (`home.js`, `shop.js`, etc.).
 
-## 🚀 How to Run
-
-Because this project uses ES Modules, you must run it on a local server (CORS restriction).
-
-### Option 1: VS Code Live Server
-1.  Install the "Live Server" extension.
-2.  Right-click `index.html` -> "Open with Live Server".
-
-### Option 2: Python
-```bash
-python3 -m http.server
-```
-Then open `http://localhost:8000`.
-
 ## 🛠️ How to Edit
 
 ### 1. Changing Text (Translations)
