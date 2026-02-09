@@ -6,8 +6,47 @@
     <title>Saya Natural Beauty</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/tailwind-config.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6B705C",
+              secondary: "#A5A58D",
+              accent: "#DDBEA9",
+              "background-light": "#FDFCF8",
+              "background-dark": "#1C1C19",
+              "surface-light": "#F4F1EA",
+              "surface-dark": "#2A2A26",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["Lato", "sans-serif"],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        scroll-behavior: smooth;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.6s ease-in;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+    </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 font-body transition-colors duration-300">
     <div id="root"></div>
@@ -39,7 +78,6 @@
 
         const navItems = [
           { name: 'SHOP', page: 'shop' },
-          { name: 'PRODUCTS', page: 'products' },
           { name: 'ABOUT', page: 'about' },
           { name: 'REVIEWS', page: 'reviews' },
           { name: 'CONTACT', page: 'contact' }
@@ -68,7 +106,7 @@
               
               // Desktop Navigation
               React.createElement('div', { className: 'hidden md:flex space-x-8' },
-                ...navItems.map(item =>
+                navItems.map(item =>
                   React.createElement('button', {
                     key: item.page,
                     onClick: () => setCurrentPage(item.page),
@@ -90,7 +128,7 @@
             mobileMenuOpen && React.createElement('div', {
               className: 'md:hidden pb-4'
             },
-              ...navItems.map(item =>
+              navItems.map(item =>
                 React.createElement('button', {
                   key: item.page,
                   onClick: () => {
@@ -165,7 +203,7 @@
             featuredProducts.length > 0 && React.createElement('div', null,
               React.createElement('h2', { className: 'font-display text-3xl text-center mb-12' }, 'Featured Products'),
               React.createElement('div', { className: 'grid grid-cols-1 md:grid-cols-3 gap-8' },
-                ...featuredProducts.map(product =>
+                featuredProducts.map(product =>
                   React.createElement('div', {
                     key: product.id,
                     className: 'group cursor-pointer',
@@ -183,7 +221,7 @@
                     ),
                     React.createElement('h3', { className: 'font-display text-xl mb-2' }, product.name),
                     React.createElement('p', { className: 'text-sm text-gray-600 dark:text-gray-400 mb-2' }, product.category),
-                    React.createElement('p', { className: 'font-bold' }, `$${product.price.toFixed(2)}`)
+                    React.createElement('p', { className: 'font-bold' }, `${product.price.toFixed(2)} L.E.`)
                   )
                 )
               )
@@ -289,7 +327,7 @@
             // Products Grid
             filteredProducts.length > 0 ?
               React.createElement('div', { className: 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8' },
-                ...filteredProducts.map(product =>
+                filteredProducts.map(product =>
                   React.createElement('div', {
                     key: product.id,
                     className: 'group cursor-pointer',
@@ -307,7 +345,7 @@
                     ),
                     React.createElement('h3', { className: 'font-display text-lg mb-1' }, product.name),
                     React.createElement('p', { className: 'text-sm text-gray-600 dark:text-gray-400 mb-2' }, product.category),
-                    React.createElement('p', { className: 'font-bold' }, `$${product.price.toFixed(2)}`),
+                    React.createElement('p', { className: 'font-bold' }, `${product.price.toFixed(2)} L.E.`),
                     React.createElement('button', {
                       className: 'mt-2 text-sm text-primary hover:underline'
                     }, 'View Details')
@@ -355,7 +393,7 @@
                 React.createElement('div', { className: 'mb-4' },
                   React.createElement('p', { className: 'text-sm text-gray-600 dark:text-gray-400 mb-2' }, product.category),
                   React.createElement('h1', { className: 'font-display text-4xl mb-4' }, product.name),
-                  React.createElement('p', { className: 'text-2xl font-bold text-primary mb-6' }, `$${product.price.toFixed(2)}`)
+                  React.createElement('p', { className: 'text-2xl font-bold text-primary mb-6' }, `${product.price.toFixed(2)} L.E.`)
                 ),
 
                 React.createElement('div', { className: 'mb-6' },
@@ -366,7 +404,7 @@
                 product.ingredients && React.createElement('div', { className: 'mb-6' },
                   React.createElement('h3', { className: 'font-display text-xl mb-2' }, 'Key Ingredients'),
                   React.createElement('div', { className: 'flex flex-wrap gap-2' },
-                    ...product.ingredients.map((ing, i) =>
+                    product.ingredients.map((ing, i) =>
                       React.createElement('span', {
                         key: i,
                         className: 'px-3 py-1 bg-surface-light dark:bg-surface-dark rounded-full text-sm'
@@ -454,7 +492,7 @@
 
             reviewsData.length > 0 ?
               React.createElement('div', { className: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' },
-                ...reviewsData.map(review =>
+                reviewsData.map(review =>
                   React.createElement('div', {
                     key: review.id,
                     className: 'bg-surface-light dark:bg-surface-dark p-6 rounded-lg'
