@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saya Natural Beauty</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         darkMode: 'class',
@@ -21,8 +21,8 @@
               "surface-dark": "#2A2A26",
             },
             fontFamily: {
-              display: ["Playfair Display", "serif"],
-              body: ["Lato", "sans-serif"],
+              display: ["Playfair Display", "Cairo", "serif"],
+              body: ["Lato", "Cairo", "sans-serif"],
             },
           },
         },
@@ -57,12 +57,230 @@
       
       const { useState, useEffect } = React;
 
+      // ==================== TRANSLATIONS ====================
+      const translations = {
+        en: {
+          nav: {
+            shop: 'SHOP',
+            about: 'ABOUT',
+            reviews: 'REVIEWS',
+            contact: 'CONTACT',
+            home: 'Saya',
+          },
+          hero: {
+            subtitle: 'PURE & ORGANIC',
+            title1: 'Unveiling',
+            title2: 'Natural Radiance',
+            desc: 'Discover the purity of skincare rooted in Maallem, imported directly from the lush landscapes of Morocco and Sudan. Saya brings you raw, authentic beauty solutions.',
+            cta: 'Explore Collection'
+          },
+          about_sect: {
+            title: 'The Essence of Saya',
+            desc: 'Saya is more than just a brand; it is a journey back to the roots of beauty. Born from a desire to bring the most authentic, high quality ingredients from Morocco and Sudan, we offer skin and body care products that are completely inspired from the heart of North and East Africa.',
+            f1_title: '100% Natural',
+            f1_desc: 'Free from parabens, sulfates, and artificial fragrances. All our ingredients speak for themselves.',
+            f2_title: 'Ethically Sourced',
+            f2_desc: 'Imported responsibly from Morocco and Sudan, supporting local communities and sustainable craftsmanship.',
+            f3_title: 'Guaranteed Results',
+            f3_desc: 'Time-tested ingredients from over several generations, ensuring a solid and trustworthy product.',
+          },
+          featured: {
+            title: 'Featured Products',
+            view_details: 'View Details',
+            price_unit: 'L.E.'
+          },
+          newsletter: {
+            title: 'Join the Natural Movement',
+            desc: 'Subscribe to receive newsletters, early access to new releases, and exclusive offers.',
+            placeholder: 'Enter your email',
+            button: 'Subscribe',
+            alert: 'Thank you for subscribing! (Note: This is a demo - no actual email will be sent)'
+          },
+          shop: {
+            title: 'Our Products',
+            search_placeholder: 'Search products...',
+            filter_all: 'All',
+            filter_oils: 'Oils',
+            filter_soaps: 'Soaps',
+            filter_treatments: 'Treatments',
+            filter_sets: 'Sets',
+            sort_name: 'Sort by Name',
+            sort_price_low: 'Price: Low to High',
+            sort_price_high: 'Price: High to Low',
+            no_products: 'No products found',
+            back_to_products: 'Back to Products'
+          },
+          product: {
+            back: '← Back to Products',
+            ingredients: 'Key Ingredients',
+            benefits: 'Benefits',
+            experience: 'The Experience',
+            in_stock: '✓ In Stock',
+            out_of_stock: 'Out of Stock',
+            add_to_cart: 'Add to Cart',
+            cart_alert: 'Shopping cart coming soon! (Demo mode)'
+          },
+          about_page: {
+            title: 'Our Story',
+            p1: 'Saya is more than just a brand; it is a journey back to the roots of beauty. Born from a desire to bring the most authentic, high quality ingredients from Morocco and Sudan, we offer skin and body care products that are completely inspired from the heart of North and East Africa.',
+            p2: 'We believe nature holds the ultimate key to radiance in a world saturated with synthetics, our mission is to provide a sanctuary of purity. Every jar, bottle, and every drop is a testament to the raw power of earth\'s beauty.',
+            p3: 'Our sourcing process is rigorous. We partner directly with local artisans in North Africa, ensuring that the Argan and indigenous oils we provide are not just fake-advertise, we deliver confidence.',
+            values_title: 'Our Values',
+            v1_title: '100% Natural',
+            v1_desc: 'All products are free from harmful chemicals. We don\'t just advertise, we deliver confidence.',
+            v2_title: 'No Cruelty',
+            v2_desc: 'Vegan and cruelty-free. Beauty shouldn\'t come at the cost of animal suffering.',
+            v3_title: 'Ethically Sourced',
+            v3_desc: 'Supporting local communities and sustainable practices in Morocco and Sudan.'
+          },
+          reviews_page: {
+            subtitle: 'TRUSTED BY OVER 10,000 CUSTOMERS',
+            title: 'Voices of Beauty',
+            desc: 'Discover why thousands of women trust Saya for their natural skincare journey. Real stories, real results, and the pure power of nature.',
+            based_on: 'Based on 1,248 reviews',
+            verified: '✓ Verified',
+            loading: 'Loading reviews...'
+          },
+          contact_page: {
+            title: 'Get In Touch',
+            info_title: 'Contact Information',
+            email: 'Email',
+            phone: 'Phone',
+            address: 'Address',
+            follow: 'Follow Us',
+            msg_title: 'Send us a Message',
+            name_ph: 'Your Name',
+            email_ph: 'Your Email',
+            msg_ph: 'Your Message',
+            send: 'Send Message',
+            alert: 'Thank you for your message! We\'ll get back to you soon. (Demo mode - no email sent)'
+          },
+          footer: {
+            desc: 'Natural Beauty, Natural Skincare. Imported quality from Morocco & Sudan.',
+            shop: 'Shop',
+            shop_links: ['All Products', 'New Arrivals', 'Best Sellers', 'Gift Sets'],
+            company: 'Company',
+            company_links: ['About Us', 'Sustainability', 'Careers', 'Contact'],
+            support: 'Support',
+            support_links: ['Shipping & Returns', 'FAQ', 'Privacy Policy', 'Terms of Service'],
+            rights: '© 2024 Saya Natural Beauty. All rights reserved.'
+          }
+        },
+        ar: {
+          nav: {
+            shop: 'المتجر',
+            about: 'من نحن',
+            reviews: 'آراء العملاء',
+            contact: 'تواصل معنا',
+            home: 'Saya',
+          },
+          hero: {
+            subtitle: 'نقي وعضوي',
+            title1: 'اكتشفي',
+            title2: 'الإشراق الطبيعي',
+            desc: 'اكتشفي نقاء العناية بالبشرة المتجذرة في المعلم، والمستوردة مباشرة من المناظر الطبيعية الخلابة في المغرب والسودان. تقدم لك صبا حلول جمال خام وأصلية.',
+            cta: 'استكشفي المجموعة'
+          },
+          about_sect: {
+            title: 'جوهر صبا',
+            desc: 'صبا هي أكثر من مجرد علامة تجارية؛ إنها رحلة العودة إلى جذور الجمال. ولدت من الرغبة في جلب المكونات الأكثر أصالة وجودة من المغرب والسودان، نقدم منتجات العناية بالبشرة والجسم المستوحاة تماماً من قلب شمال وشرق أفريقيا.',
+            f1_title: 'طبيعي 100%',
+            f1_desc: 'خالٍ من البارابين والكبريتات والعطور الاصطناعية. جميع مكوناتنا تتحدث عن نفسها.',
+            f2_title: 'مصادر أخلاقية',
+            f2_desc: 'مستورد بمسؤولية من المغرب والسودان، لدعم المجتمعات المحلية والحرف اليدوية المستدامة.',
+            f3_title: 'نتائج مضمونة',
+            f3_desc: 'مكونات مجربة عبر الزمن لأجيال عديدة، لضمان منتج قوي وجدير بالثقة.',
+          },
+          featured: {
+            title: 'منتجات مميزة',
+            view_details: 'عرض التفاصيل',
+            price_unit: 'ج.م'
+          },
+          newsletter: {
+            title: 'انضمي للحركة الطبيعية',
+            desc: 'اشتركي لتلقي النشرات الإخبارية، والوصول المبكر للإصدارات الجديدة، والعروض الحصرية.',
+            placeholder: 'أدخلي بريدك الإلكتروني',
+            button: 'اشترك',
+            alert: 'شكراً لاشتراكك! (ملاحظة: هذا عرض تجريبي - لن يتم إرسال بريد إلكتروني فعلي)'
+          },
+          shop: {
+            title: 'منتجاتنا',
+            search_placeholder: 'بحث عن المنتجات...',
+            filter_all: 'الكل',
+            filter_oils: 'زيوت',
+            filter_soaps: 'صابون',
+            filter_treatments: 'علاجات',
+            filter_sets: 'مجموعات',
+            sort_name: 'ترتيب حسب الاسم',
+            sort_price_low: 'السعر: من الأقل للأعلى',
+            sort_price_high: 'السعر: من الأعلى للأقل',
+            no_products: 'لم يتم العثور على منتجات',
+            back_to_products: 'العودة للمنتجات'
+          },
+          product: {
+            back: '← العودة للمنتجات',
+            ingredients: 'المكونات الرئيسية',
+            benefits: 'الفوائد',
+            experience: 'التجربة',
+            in_stock: '✓ متوفر',
+            out_of_stock: 'غير متوفر',
+            add_to_cart: 'أضف للسلة',
+            cart_alert: 'سلة التسوق قريباً! (وضع تجريبي)'
+          },
+          about_page: {
+            title: 'قصتنا',
+            p1: 'صبا هي أكثر من مجرد علامة تجارية؛ إنها رحلة العودة إلى جذور الجمال. ولدت من الرغبة في جلب المكونات الأكثر أصالة وجودة من المغرب والسودان، نقدم منتجات العناية بالبشرة والجسم المستوحاة تماماً من قلب شمال وشرق أفريقيا.',
+            p2: 'نؤمن أن الطبيعة تحمل المفتاح النهائي للإشراق في عالم مشبع بالمصنعات، مهمتنا هي توفير ملاذ للنقاء. كل جرة، وزجاجة، وكل قطرة هي شهادة على القوة الخام لجمال الأرض.',
+            p3: 'عملية التوريد لدينا صارمة. نتشارك مباشرة مع الحرفيين المحليين في شمال أفريقيا، لضمان أن الأرغان والزيوت الأصلية التي نقدمها ليست مجرد دعاية مزيفة، نحن نقدم الثقة.',
+            values_title: 'قيمنا',
+            v1_title: 'طبيعي 100%',
+            v1_desc: 'جميع المنتجات خالية من المواد الكيميائية الضارة. نحن لا نعلن فقط، نحن نقدم الثقة.',
+            v2_title: 'بدون قسوة',
+            v2_desc: 'نباتي وخالٍ من القسوة. الجمال لا ينبغي أن يأتي على حساب معاناة الحيوانات.',
+            v3_title: 'مصادر أخلاقية',
+            v3_desc: 'دعم المجتمعات المحلية والممارسات المستدامة في المغرب والسودان.'
+          },
+          reviews_page: {
+            subtitle: 'موثوق به من قبل أكثر من 10,000 عميل',
+            title: 'أصوات الجمال',
+            desc: 'اكتشفي لماذا تثق آلاف النساء في صبا لرحلة العناية بالبشرة الطبيعية. قصص حقيقية، نتائج حقيقية، والقوة النقية للطبيعة.',
+            based_on: 'بناءً على 1,248 تقييم',
+            verified: '✓ موثق',
+            loading: 'جاري تحميل التقييمات...'
+          },
+          contact_page: {
+            title: 'تواصل معنا',
+            info_title: 'معلومات الاتصال',
+            email: 'البريد الإلكتروني',
+            phone: 'الهاتف',
+            address: 'العنوان',
+            follow: 'تابعنا',
+            msg_title: 'أرسل لنا رسالة',
+            name_ph: 'اسمك',
+            email_ph: 'بريدك الإلكتروني',
+            msg_ph: 'رسالتك',
+            send: 'إرسال الرسالة',
+            alert: 'شكراً لرسالتك! سنعود إليك قريباً. (وضع تجريبي - لم يتم إرسال بريد إلكتروني)'
+          },
+          footer: {
+            desc: 'جمال طبيعي، عناية طبيعية بالبشرة. جودة مستوردة من المغرب والسودان.',
+            shop: 'المتجر',
+            shop_links: ['جميع المنتجات', 'وصل حديثاً', 'الأكثر مبيعاً', 'مجموعات الهدايا'],
+            company: 'الشركة',
+            company_links: ['من نحن', 'الاستدامة', 'الوظائف', 'تواصل معنا'],
+            support: 'الدعم',
+            support_links: ['الشحن والإرجاع', 'الأسئلة الشائعة', 'سياسة الخصوصية', 'شروط الخدمة'],
+            rights: '© 2024 صبا للجمال الطبيعي. جميع الحقوق محفوظة.'
+          }
+        }
+      };
+
       // ==================== DATA STATE ====================
       let productsData = [];
       let reviewsData = [];
 
       // Load products from JSON
-      fetch('./products.json')
+      fetch('products.json')
         .then(res => res.json())
         .then(data => {
           productsData = data.products;
@@ -73,14 +291,14 @@
         .catch(err => console.error('Error loading products:', err));
 
       // ==================== NAVIGATION ====================
-      const Navigation = ({ currentPage, setCurrentPage, darkMode, toggleDarkMode }) => {
+      const Navigation = ({ currentPage, setCurrentPage, darkMode, toggleDarkMode, language, toggleLanguage, t }) => {
         const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
         const navItems = [
-          { name: 'SHOP', page: 'shop' },
-          { name: 'ABOUT', page: 'about' },
-          { name: 'REVIEWS', page: 'reviews' },
-          { name: 'CONTACT', page: 'contact' }
+          { name: t.nav.shop, page: 'shop' },
+          { name: t.nav.about, page: 'about' },
+          { name: t.nav.reviews, page: 'reviews' },
+          { name: t.nav.contact, page: 'contact' }
         ];
 
         return React.createElement('nav', {
@@ -101,11 +319,11 @@
               },
                 React.createElement('h1', {
                   className: 'text-2xl font-display font-bold'
-                }, 'Saya')
+                }, t.nav.home)
               ),
               
               // Desktop Navigation
-              React.createElement('div', { className: 'hidden md:flex space-x-8' },
+              React.createElement('div', { className: 'hidden md:flex gap-8' },
                 navItems.map(item =>
                   React.createElement('button', {
                     key: item.page,
@@ -115,8 +333,12 @@
                 )
               ),
               
-              // Dark mode toggle and search
-              React.createElement('div', { className: 'flex items-center space-x-4' },
+              // Dark mode toggle and Language Toggle
+              React.createElement('div', { className: 'flex items-center gap-4' },
+                React.createElement('button', {
+                    onClick: toggleLanguage,
+                    className: 'px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors'
+                }, language === 'en' ? 'AR' : 'EN'),
                 React.createElement('button', {
                   onClick: toggleDarkMode,
                   className: 'p-2 hover:text-primary transition-colors'
@@ -135,7 +357,7 @@
                     setCurrentPage(item.page);
                     setMobileMenuOpen(false);
                   },
-                  className: `block w-full text-left py-2 px-4 hover:bg-surface-light dark:hover:bg-surface-dark ${currentPage === item.page ? 'text-primary font-bold' : ''}`
+                  className: `block w-full text-start py-2 px-4 hover:bg-surface-light dark:hover:bg-surface-dark ${currentPage === item.page ? 'text-primary font-bold' : ''}`
                 }, item.name)
               )
             )
@@ -144,7 +366,7 @@
       };
 
       // ==================== HOME PAGE ====================
-      const HomePage = ({ setCurrentPage, setSelectedProduct }) => {
+      const HomePage = ({ setCurrentPage, setSelectedProduct, t, language }) => {
         const featuredProducts = productsData.filter(p => p.featured).slice(0, 3);
 
         return React.createElement('div', { className: 'animate-fade-in' },
@@ -157,73 +379,71 @@
               className: 'w-full h-full object-cover'
             }),
             React.createElement('div', { className: 'absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-4' },
-              React.createElement('p', { className: 'text-sm uppercase tracking-[0.3em] mb-4' }, 'PURE & ORGANIC'),
-              React.createElement('h1', { className: 'font-display text-6xl md:text-7xl mb-6' }, 'Unveiling'),
-              React.createElement('h1', { className: 'font-display text-6xl md:text-7xl italic mb-6' }, 'Natural Radiance'),
-              React.createElement('p', { className: 'text-lg max-w-2xl mb-8' },
-                'Discover the purity of skincare rooted in Maallem, imported directly from the lush landscapes of Morocco and Sudan. Saya brings you raw, authentic beauty solutions.'
-              ),
+              React.createElement('p', { className: 'text-sm uppercase tracking-[0.3em] mb-4' }, t.hero.subtitle),
+              React.createElement('h1', { className: 'font-display text-6xl md:text-7xl mb-6' }, t.hero.title1),
+              React.createElement('h1', { className: 'font-display text-6xl md:text-7xl italic mb-6' }, t.hero.title2),
+              React.createElement('p', { className: 'text-lg max-w-2xl mb-8' }, t.hero.desc),
               React.createElement('button', {
                 onClick: () => setCurrentPage('products'),
                 className: 'px-8 py-3 border-2 border-white hover:bg-white hover:text-gray-900 transition-all'
-              }, 'Explore Collection')
+              }, t.hero.cta)
             )
           ),
 
           // About Section
           React.createElement('div', { className: 'max-w-7xl mx-auto px-4 py-20' },
             React.createElement('div', { className: 'text-center mb-16' },
-              React.createElement('h2', { className: 'font-display text-4xl mb-4' }, 'The Essence of Saya'),
+              React.createElement('h2', { className: 'font-display text-4xl mb-4' }, t.about_sect.title),
               React.createElement('div', { className: 'w-20 h-1 bg-primary mx-auto mb-8' }),
-              React.createElement('p', { className: 'max-w-3xl mx-auto text-lg' },
-                'Saya is more than just a brand; it is a journey back to the roots of beauty. Born from a desire to bring the most authentic, high quality ingredients from Morocco and Sudan, we offer skin and body care products that are completely inspired from the heart of North and East Africa.'
-              )
+              React.createElement('p', { className: 'max-w-3xl mx-auto text-lg' }, t.about_sect.desc)
             ),
 
             // Features
             React.createElement('div', { className: 'grid grid-cols-1 md:grid-cols-3 gap-12 mb-20' },
               React.createElement('div', { className: 'text-center' },
                 React.createElement('div', { className: 'text-4xl mb-4' }, '🌿'),
-                React.createElement('h3', { className: 'font-display text-xl mb-2' }, '100% Natural'),
-                React.createElement('p', null, 'Free from parabens, sulfates, and artificial fragrances. All our ingredients speak for themselves.')
+                React.createElement('h3', { className: 'font-display text-xl mb-2' }, t.about_sect.f1_title),
+                React.createElement('p', null, t.about_sect.f1_desc)
               ),
               React.createElement('div', { className: 'text-center' },
                 React.createElement('div', { className: 'text-4xl mb-4' }, '🌍'),
-                React.createElement('h3', { className: 'font-display text-xl mb-2' }, 'Ethically Sourced'),
-                React.createElement('p', null, 'Imported responsibly from Morocco and Sudan, supporting local communities and sustainable craftsmanship.')
+                React.createElement('h3', { className: 'font-display text-xl mb-2' }, t.about_sect.f2_title),
+                React.createElement('p', null, t.about_sect.f2_desc)
               ),
               React.createElement('div', { className: 'text-center' },
                 React.createElement('div', { className: 'text-4xl mb-4' }, '✨'),
-                React.createElement('h3', { className: 'font-display text-xl mb-2' }, 'Guaranteed Results'),
-                React.createElement('p', null, 'Time-tested ingredients from over several generations, ensuring a solid and trustworthy product.')
+                React.createElement('h3', { className: 'font-display text-xl mb-2' }, t.about_sect.f3_title),
+                React.createElement('p', null, t.about_sect.f3_desc)
               )
             ),
 
             // Featured Products
             featuredProducts.length > 0 && React.createElement('div', null,
-              React.createElement('h2', { className: 'font-display text-3xl text-center mb-12' }, 'Featured Products'),
+              React.createElement('h2', { className: 'font-display text-3xl text-center mb-12' }, t.featured.title),
               React.createElement('div', { className: 'grid grid-cols-1 md:grid-cols-3 gap-8' },
-                featuredProducts.map(product =>
-                  React.createElement('div', {
-                    key: product.id,
-                    className: 'group cursor-pointer',
-                    onClick: () => {
-                      setSelectedProduct(product);
-                      setCurrentPage('product-detail');
-                    }
-                  },
-                    React.createElement('div', { className: 'aspect-square bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden mb-4' },
-                      React.createElement('img', {
-                        src: product.image,
-                        alt: product.name,
-                        className: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300'
-                      })
-                    ),
-                    React.createElement('h3', { className: 'font-display text-xl mb-2' }, product.name),
-                    React.createElement('p', { className: 'text-sm text-gray-600 dark:text-gray-400 mb-2' }, product.category),
-                    React.createElement('p', { className: 'font-bold' }, `${product.price.toFixed(2)} L.E.`)
-                  )
-                )
+                featuredProducts.map(product => {
+                    const name = language === 'ar' ? product.name_ar || product.name : product.name;
+                    const category = language === 'ar' ? product.category_ar || product.category : product.category;
+                    return React.createElement('div', {
+                        key: product.id,
+                        className: 'group cursor-pointer',
+                        onClick: () => {
+                        setSelectedProduct(product);
+                        setCurrentPage('product-detail');
+                        }
+                    },
+                        React.createElement('div', { className: 'aspect-square bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden mb-4' },
+                        React.createElement('img', {
+                            src: product.image,
+                            alt: name,
+                            className: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300'
+                        })
+                        ),
+                        React.createElement('h3', { className: 'font-display text-xl mb-2' }, name),
+                        React.createElement('p', { className: 'text-sm text-gray-600 dark:text-gray-400 mb-2' }, category),
+                        React.createElement('p', { className: 'font-bold' }, `${product.price.toFixed(2)} ${t.featured.price_unit}`)
+                    );
+                })
               )
             )
           ),
@@ -231,25 +451,25 @@
           // Newsletter
           React.createElement('div', { className: 'bg-primary text-white py-16' },
             React.createElement('div', { className: 'max-w-3xl mx-auto text-center px-4' },
-              React.createElement('h2', { className: 'font-display text-3xl mb-4' }, 'Join the Natural Movement'),
-              React.createElement('p', { className: 'mb-8' }, 'Subscribe to receive newsletters, early access to new releases, and exclusive offers.'),
+              React.createElement('h2', { className: 'font-display text-3xl mb-4' }, t.newsletter.title),
+              React.createElement('p', { className: 'mb-8' }, t.newsletter.desc),
               React.createElement('form', {
                 className: 'flex flex-col sm:flex-row gap-4 max-w-md mx-auto',
                 onSubmit: (e) => {
                   e.preventDefault();
-                  alert('Thank you for subscribing! (Note: This is a demo - no actual email will be sent)');
+                  alert(t.newsletter.alert);
                 }
               },
                 React.createElement('input', {
                   type: 'email',
-                  placeholder: 'Enter your email',
+                  placeholder: t.newsletter.placeholder,
                   required: true,
                   className: 'flex-1 px-4 py-3 rounded-sm text-gray-900'
                 }),
                 React.createElement('button', {
                   type: 'submit',
                   className: 'px-8 py-3 bg-gray-900 hover:bg-gray-800 transition-colors rounded-sm'
-                }, 'Subscribe')
+                }, t.newsletter.button)
               )
             )
           )
@@ -257,12 +477,18 @@
       };
 
       // ==================== PRODUCTS PAGE ====================
-      const ProductsPage = ({ setCurrentPage, setSelectedProduct }) => {
+      const ProductsPage = ({ setCurrentPage, setSelectedProduct, t, language }) => {
         const [filter, setFilter] = useState('All');
         const [sortBy, setSortBy] = useState('name');
         const [searchTerm, setSearchTerm] = useState('');
 
-        const categories = ['All', 'Oils', 'Soaps', 'Treatments', 'Sets'];
+        const categories = [
+            { key: 'All', label: t.shop.filter_all },
+            { key: 'Oils', label: t.shop.filter_oils },
+            { key: 'Soaps', label: t.shop.filter_soaps },
+            { key: 'Treatments', label: t.shop.filter_treatments },
+            { key: 'Sets', label: t.shop.filter_sets }
+        ];
 
         let filteredProducts = productsData;
 
@@ -273,15 +499,22 @@
 
         // Search
         if (searchTerm) {
+          const term = searchTerm.toLowerCase();
           filteredProducts = filteredProducts.filter(p =>
-            p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            p.description.toLowerCase().includes(searchTerm.toLowerCase())
+            (p.name && p.name.toLowerCase().includes(term)) ||
+            (p.description && p.description.toLowerCase().includes(term)) ||
+            (p.name_ar && p.name_ar.includes(term)) ||
+            (p.description_ar && p.description_ar.includes(term))
           );
         }
 
         // Sort
         filteredProducts = [...filteredProducts].sort((a, b) => {
-          if (sortBy === 'name') return a.name.localeCompare(b.name);
+          if (sortBy === 'name') {
+              const nameA = language === 'ar' ? a.name_ar || a.name : a.name;
+              const nameB = language === 'ar' ? b.name_ar || b.name : b.name;
+              return nameA.localeCompare(nameB);
+          }
           if (sortBy === 'price-low') return a.price - b.price;
           if (sortBy === 'price-high') return b.price - a.price;
           return 0;
@@ -289,13 +522,13 @@
 
         return React.createElement('div', { className: 'animate-fade-in min-h-screen' },
           React.createElement('div', { className: 'max-w-7xl mx-auto px-4 py-12' },
-            React.createElement('h1', { className: 'font-display text-4xl mb-8 text-center' }, 'Our Products'),
+            React.createElement('h1', { className: 'font-display text-4xl mb-8 text-center' }, t.shop.title),
             
             // Search
             React.createElement('div', { className: 'mb-8' },
               React.createElement('input', {
                 type: 'text',
-                placeholder: 'Search products...',
+                placeholder: t.shop.search_placeholder,
                 value: searchTerm,
                 onChange: (e) => setSearchTerm(e.target.value),
                 className: 'w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800'
@@ -307,10 +540,10 @@
               React.createElement('div', { className: 'flex gap-4 flex-wrap' },
                 ...categories.map(cat =>
                   React.createElement('button', {
-                    key: cat,
-                    onClick: () => setFilter(cat),
-                    className: `px-4 py-2 rounded-full transition-colors ${filter === cat ? 'bg-primary text-white' : 'bg-surface-light dark:bg-surface-dark'}`
-                  }, cat)
+                    key: cat.key,
+                    onClick: () => setFilter(cat.key),
+                    className: `px-4 py-2 rounded-full transition-colors ${filter === cat.key ? 'bg-primary text-white' : 'bg-surface-light dark:bg-surface-dark'}`
+                  }, cat.label)
                 )
               ),
               React.createElement('select', {
@@ -318,72 +551,80 @@
                 onChange: (e) => setSortBy(e.target.value),
                 className: 'px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800'
               },
-                React.createElement('option', { value: 'name' }, 'Sort by Name'),
-                React.createElement('option', { value: 'price-low' }, 'Price: Low to High'),
-                React.createElement('option', { value: 'price-high' }, 'Price: High to Low')
+                React.createElement('option', { value: 'name' }, t.shop.sort_name),
+                React.createElement('option', { value: 'price-low' }, t.shop.sort_price_low),
+                React.createElement('option', { value: 'price-high' }, t.shop.sort_price_high)
               )
             ),
 
             // Products Grid
             filteredProducts.length > 0 ?
               React.createElement('div', { className: 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8' },
-                filteredProducts.map(product =>
-                  React.createElement('div', {
-                    key: product.id,
-                    className: 'group cursor-pointer',
-                    onClick: () => {
-                      setSelectedProduct(product);
-                      setCurrentPage('product-detail');
-                    }
-                  },
-                    React.createElement('div', { className: 'aspect-square bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden mb-4' },
-                      React.createElement('img', {
-                        src: product.image,
-                        alt: product.name,
-                        className: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300'
-                      })
-                    ),
-                    React.createElement('h3', { className: 'font-display text-lg mb-1' }, product.name),
-                    React.createElement('p', { className: 'text-sm text-gray-600 dark:text-gray-400 mb-2' }, product.category),
-                    React.createElement('p', { className: 'font-bold' }, `${product.price.toFixed(2)} L.E.`),
-                    React.createElement('button', {
-                      className: 'mt-2 text-sm text-primary hover:underline'
-                    }, 'View Details')
-                  )
-                )
+                filteredProducts.map(product => {
+                    const name = language === 'ar' ? product.name_ar || product.name : product.name;
+                    const category = language === 'ar' ? product.category_ar || product.category : product.category;
+                    return React.createElement('div', {
+                        key: product.id,
+                        className: 'group cursor-pointer',
+                        onClick: () => {
+                        setSelectedProduct(product);
+                        setCurrentPage('product-detail');
+                        }
+                    },
+                        React.createElement('div', { className: 'aspect-square bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden mb-4' },
+                        React.createElement('img', {
+                            src: product.image,
+                            alt: name,
+                            className: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300'
+                        })
+                        ),
+                        React.createElement('h3', { className: 'font-display text-lg mb-1' }, name),
+                        React.createElement('p', { className: 'text-sm text-gray-600 dark:text-gray-400 mb-2' }, category),
+                        React.createElement('p', { className: 'font-bold' }, `${product.price.toFixed(2)} ${t.featured.price_unit}`),
+                        React.createElement('button', {
+                        className: 'mt-2 text-sm text-primary hover:underline'
+                        }, t.shop.view_details || 'View Details')
+                    );
+                })
               )
               : React.createElement('div', { className: 'text-center py-20' },
-                  React.createElement('p', { className: 'text-xl' }, 'No products found')
+                  React.createElement('p', { className: 'text-xl' }, t.shop.no_products)
                 )
           )
         );
       };
 
       // ==================== PRODUCT DETAIL PAGE ====================
-      const ProductDetailPage = ({ product, setCurrentPage }) => {
+      const ProductDetailPage = ({ product, setCurrentPage, t, language }) => {
         if (!product) {
           return React.createElement('div', { className: 'text-center py-20' },
             React.createElement('p', null, 'Product not found'),
             React.createElement('button', {
               onClick: () => setCurrentPage('products'),
               className: 'mt-4 px-6 py-2 bg-primary text-white rounded-lg'
-            }, 'Back to Products')
+            }, t.shop.back_to_products)
           );
         }
+
+        const name = language === 'ar' ? product.name_ar || product.name : product.name;
+        const description = language === 'ar' ? product.description_ar || product.description : product.description;
+        const category = language === 'ar' ? product.category_ar || product.category : product.category;
+        const ingredients = language === 'ar' ? product.ingredients_ar || product.ingredients : product.ingredients;
+        const benefits = language === 'ar' ? product.benefits_ar || product.benefits : product.benefits;
 
         return React.createElement('div', { className: 'animate-fade-in min-h-screen' },
           React.createElement('div', { className: 'max-w-7xl mx-auto px-4 py-12' },
             React.createElement('button', {
               onClick: () => setCurrentPage('products'),
               className: 'mb-8 text-primary hover:underline'
-            }, '← Back to Products'),
+            }, t.product.back),
 
             React.createElement('div', { className: 'grid grid-cols-1 md:grid-cols-2 gap-12' },
               // Image
               React.createElement('div', { className: 'aspect-square bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden' },
                 React.createElement('img', {
                   src: product.image,
-                  alt: product.name,
+                  alt: name,
                   className: 'w-full h-full object-cover'
                 })
               ),
@@ -391,20 +632,20 @@
               // Details
               React.createElement('div', null,
                 React.createElement('div', { className: 'mb-4' },
-                  React.createElement('p', { className: 'text-sm text-gray-600 dark:text-gray-400 mb-2' }, product.category),
-                  React.createElement('h1', { className: 'font-display text-4xl mb-4' }, product.name),
-                  React.createElement('p', { className: 'text-2xl font-bold text-primary mb-6' }, `${product.price.toFixed(2)} L.E.`)
+                  React.createElement('p', { className: 'text-sm text-gray-600 dark:text-gray-400 mb-2' }, category),
+                  React.createElement('h1', { className: 'font-display text-4xl mb-4' }, name),
+                  React.createElement('p', { className: 'text-2xl font-bold text-primary mb-6' }, `${product.price.toFixed(2)} ${t.featured.price_unit}`)
                 ),
 
                 React.createElement('div', { className: 'mb-6' },
-                  React.createElement('h3', { className: 'font-display text-xl mb-2' }, 'The Experience'),
-                  React.createElement('p', { className: 'text-gray-700 dark:text-gray-300' }, product.description)
+                  React.createElement('h3', { className: 'font-display text-xl mb-2' }, t.product.experience),
+                  React.createElement('p', { className: 'text-gray-700 dark:text-gray-300' }, description)
                 ),
 
-                product.ingredients && React.createElement('div', { className: 'mb-6' },
-                  React.createElement('h3', { className: 'font-display text-xl mb-2' }, 'Key Ingredients'),
+                ingredients && React.createElement('div', { className: 'mb-6' },
+                  React.createElement('h3', { className: 'font-display text-xl mb-2' }, t.product.ingredients),
                   React.createElement('div', { className: 'flex flex-wrap gap-2' },
-                    product.ingredients.map((ing, i) =>
+                    ingredients.map((ing, i) =>
                       React.createElement('span', {
                         key: i,
                         className: 'px-3 py-1 bg-surface-light dark:bg-surface-dark rounded-full text-sm'
@@ -413,21 +654,21 @@
                   )
                 ),
 
-                product.benefits && React.createElement('div', { className: 'mb-6' },
-                  React.createElement('h3', { className: 'font-display text-xl mb-2' }, 'Benefits'),
-                  React.createElement('p', { className: 'text-gray-700 dark:text-gray-300' }, product.benefits)
+                benefits && React.createElement('div', { className: 'mb-6' },
+                  React.createElement('h3', { className: 'font-display text-xl mb-2' }, t.product.benefits),
+                  React.createElement('p', { className: 'text-gray-700 dark:text-gray-300' }, benefits)
                 ),
 
                 React.createElement('div', { className: 'flex items-center gap-4 mb-6' },
                   product.inStock ?
-                    React.createElement('span', { className: 'text-green-600' }, '✓ In Stock') :
-                    React.createElement('span', { className: 'text-red-600' }, 'Out of Stock')
+                    React.createElement('span', { className: 'text-green-600' }, t.product.in_stock) :
+                    React.createElement('span', { className: 'text-red-600' }, t.product.out_of_stock)
                 ),
 
                 React.createElement('button', {
                   className: 'w-full md:w-auto px-8 py-3 bg-primary text-white hover:bg-primary/90 transition-colors rounded-lg',
-                  onClick: () => alert('Shopping cart coming soon! (Demo mode)')
-                }, 'Add to Cart')
+                  onClick: () => alert(t.product.cart_alert)
+                }, t.product.add_to_cart)
               )
             )
           )
@@ -435,35 +676,29 @@
       };
 
       // ==================== ABOUT PAGE ====================
-      const AboutPage = () => {
+      const AboutPage = ({ t }) => {
         return React.createElement('div', { className: 'animate-fade-in' },
           React.createElement('div', { className: 'max-w-4xl mx-auto px-4 py-20' },
-            React.createElement('h1', { className: 'font-display text-5xl mb-8 text-center' }, 'Our Story'),
+            React.createElement('h1', { className: 'font-display text-5xl mb-8 text-center' }, t.about_page.title),
             React.createElement('div', { className: 'w-20 h-1 bg-primary mx-auto mb-12' }),
             
             React.createElement('div', { className: 'prose prose-lg max-w-none dark:prose-invert' },
-              React.createElement('p', { className: 'text-xl mb-6' },
-                'Saya is more than just a brand; it is a journey back to the roots of beauty. Born from a desire to bring the most authentic, high quality ingredients from Morocco and Sudan, we offer skin and body care products that are completely inspired from the heart of North and East Africa.'
-              ),
-              React.createElement('p', { className: 'mb-6' },
-                'We believe nature holds the ultimate key to radiance in a world saturated with synthetics, our mission is to provide a sanctuary of purity. Every jar, bottle, and every drop is a testament to the raw power of earth\'s beauty.'
-              ),
-              React.createElement('p', { className: 'mb-6' },
-                'Our sourcing process is rigorous. We partner directly with local artisans in North Africa, ensuring that the Argan and indigenous oils we provide are not just fake-advertise, we deliver confidence.'
-              ),
-              React.createElement('h2', { className: 'font-display text-3xl mt-12 mb-6' }, 'Our Values'),
+              React.createElement('p', { className: 'text-xl mb-6' }, t.about_page.p1),
+              React.createElement('p', { className: 'mb-6' }, t.about_page.p2),
+              React.createElement('p', { className: 'mb-6' }, t.about_page.p3),
+              React.createElement('h2', { className: 'font-display text-3xl mt-12 mb-6' }, t.about_page.values_title),
               React.createElement('div', { className: 'grid grid-cols-1 md:grid-cols-3 gap-8 mt-8' },
                 React.createElement('div', null,
-                  React.createElement('h3', { className: 'font-display text-xl mb-2' }, '100% Natural'),
-                  React.createElement('p', null, 'All products are free from harmful chemicals. We don\'t just advertise, we deliver confidence.')
+                  React.createElement('h3', { className: 'font-display text-xl mb-2' }, t.about_page.v1_title),
+                  React.createElement('p', null, t.about_page.v1_desc)
                 ),
                 React.createElement('div', null,
-                  React.createElement('h3', { className: 'font-display text-xl mb-2' }, 'No Cruelty'),
-                  React.createElement('p', null, 'Vegan and cruelty-free. Beauty shouldn\'t come at the cost of animal suffering.')
+                  React.createElement('h3', { className: 'font-display text-xl mb-2' }, t.about_page.v2_title),
+                  React.createElement('p', null, t.about_page.v2_desc)
                 ),
                 React.createElement('div', null,
-                  React.createElement('h3', { className: 'font-display text-xl mb-2' }, 'Ethically Sourced'),
-                  React.createElement('p', null, 'Supporting local communities and sustainable practices in Morocco and Sudan.')
+                  React.createElement('h3', { className: 'font-display text-xl mb-2' }, t.about_page.v3_title),
+                  React.createElement('p', null, t.about_page.v3_desc)
                 )
               )
             )
@@ -472,20 +707,18 @@
       };
 
       // ==================== REVIEWS PAGE ====================
-      const ReviewsPage = () => {
+      const ReviewsPage = ({ t }) => {
         return React.createElement('div', { className: 'animate-fade-in min-h-screen' },
           React.createElement('div', { className: 'max-w-7xl mx-auto px-4 py-20' },
             React.createElement('div', { className: 'text-center mb-16' },
-              React.createElement('p', { className: 'text-sm uppercase tracking-widest mb-2' }, 'TRUSTED BY OVER 10,000 CUSTOMERS'),
-              React.createElement('h1', { className: 'font-display text-5xl mb-4' }, 'Voices of Beauty'),
-              React.createElement('p', { className: 'text-lg max-w-2xl mx-auto' },
-                'Discover why thousands of women trust Saya for their natural skincare journey. Real stories, real results, and the pure power of nature.'
-              ),
+              React.createElement('p', { className: 'text-sm uppercase tracking-widest mb-2' }, t.reviews_page.subtitle),
+              React.createElement('h1', { className: 'font-display text-5xl mb-4' }, t.reviews_page.title),
+              React.createElement('p', { className: 'text-lg max-w-2xl mx-auto' }, t.reviews_page.desc),
               React.createElement('div', { className: 'flex justify-center gap-8 mt-8' },
                 React.createElement('div', null,
                   React.createElement('div', { className: 'text-3xl font-bold' }, '4.9'),
                   React.createElement('div', { className: 'text-yellow-500' }, '★★★★★'),
-                  React.createElement('div', { className: 'text-sm text-gray-600' }, 'Based on 1,248 reviews')
+                  React.createElement('div', { className: 'text-sm text-gray-600' }, t.reviews_page.based_on)
                 )
               )
             ),
@@ -504,7 +737,7 @@
                       ),
                       review.verified && React.createElement('span', {
                         className: 'text-xs bg-green-100 text-green-800 px-2 py-1 rounded'
-                      }, '✓ Verified')
+                      }, t.reviews_page.verified)
                     ),
                     React.createElement('div', { className: 'text-yellow-500 mb-2' },
                       '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating)
@@ -514,37 +747,37 @@
                   )
                 )
               )
-              : React.createElement('div', { className: 'text-center' }, 'Loading reviews...')
+              : React.createElement('div', { className: 'text-center' }, t.reviews_page.loading)
           )
         );
       };
 
       // ==================== CONTACT PAGE ====================
-      const ContactPage = () => {
+      const ContactPage = ({ t }) => {
         return React.createElement('div', { className: 'animate-fade-in min-h-screen' },
           React.createElement('div', { className: 'max-w-4xl mx-auto px-4 py-20' },
-            React.createElement('h1', { className: 'font-display text-5xl mb-8 text-center' }, 'Get In Touch'),
+            React.createElement('h1', { className: 'font-display text-5xl mb-8 text-center' }, t.contact_page.title),
             React.createElement('div', { className: 'w-20 h-1 bg-primary mx-auto mb-12' }),
 
             React.createElement('div', { className: 'grid grid-cols-1 md:grid-cols-2 gap-12 mb-12' },
               React.createElement('div', null,
-                React.createElement('h3', { className: 'font-display text-2xl mb-4' }, 'Contact Information'),
+                React.createElement('h3', { className: 'font-display text-2xl mb-4' }, t.contact_page.info_title),
                 React.createElement('div', { className: 'space-y-4' },
                   React.createElement('div', null,
-                    React.createElement('p', { className: 'font-bold' }, 'Email'),
+                    React.createElement('p', { className: 'font-bold' }, t.contact_page.email),
                     React.createElement('p', null, 'hello@sayanaturalbeauty.com')
                   ),
                   React.createElement('div', null,
-                    React.createElement('p', { className: 'font-bold' }, 'Phone'),
+                    React.createElement('p', { className: 'font-bold' }, t.contact_page.phone),
                     React.createElement('p', null, '+1 (555) 123-4567')
                   ),
                   React.createElement('div', null,
-                    React.createElement('p', { className: 'font-bold' }, 'Address'),
+                    React.createElement('p', { className: 'font-bold' }, t.contact_page.address),
                     React.createElement('p', null, 'City, Country'),
                     React.createElement('p', null, 'ZIP Code')
                   ),
                   React.createElement('div', null,
-                    React.createElement('p', { className: 'font-bold' }, 'Follow Us'),
+                    React.createElement('p', { className: 'font-bold' }, t.contact_page.follow),
                     React.createElement('div', { className: 'flex gap-4 mt-2' },
                       React.createElement('a', { href: '#', className: 'hover:text-primary' }, 'Instagram'),
                       React.createElement('a', { href: '#', className: 'hover:text-primary' }, 'Facebook'),
@@ -555,29 +788,29 @@
               ),
 
               React.createElement('div', null,
-                React.createElement('h3', { className: 'font-display text-2xl mb-4' }, 'Send us a Message'),
+                React.createElement('h3', { className: 'font-display text-2xl mb-4' }, t.contact_page.msg_title),
                 React.createElement('form', {
                   className: 'space-y-4',
                   onSubmit: (e) => {
                     e.preventDefault();
-                    alert('Thank you for your message! We\'ll get back to you soon. (Demo mode - no email sent)');
+                    alert(t.contact_page.alert);
                     e.target.reset();
                   }
                 },
                   React.createElement('input', {
                     type: 'text',
-                    placeholder: 'Your Name',
+                    placeholder: t.contact_page.name_ph,
                     required: true,
                     className: 'w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800'
                   }),
                   React.createElement('input', {
                     type: 'email',
-                    placeholder: 'Your Email',
+                    placeholder: t.contact_page.email_ph,
                     required: true,
                     className: 'w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800'
                   }),
                   React.createElement('textarea', {
-                    placeholder: 'Your Message',
+                    placeholder: t.contact_page.msg_ph,
                     required: true,
                     rows: 5,
                     className: 'w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800'
@@ -585,7 +818,7 @@
                   React.createElement('button', {
                     type: 'submit',
                     className: 'w-full px-6 py-3 bg-primary text-white hover:bg-primary/90 transition-colors rounded-lg'
-                  }, 'Send Message')
+                  }, t.contact_page.send)
                 )
               )
             )
@@ -594,45 +827,34 @@
       };
 
       // ==================== FOOTER ====================
-      const Footer = () => {
+      const Footer = ({ t }) => {
         return React.createElement('footer', { className: 'bg-gray-900 text-white py-12' },
           React.createElement('div', { className: 'max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8' },
             React.createElement('div', null,
               React.createElement('h3', { className: 'font-display text-xl mb-4' }, 'Saya'),
-              React.createElement('p', { className: 'text-sm text-gray-400' },
-                'Natural Beauty, Natural Skincare. Imported quality from Morocco & Sudan.'
+              React.createElement('p', { className: 'text-sm text-gray-400' }, t.footer.desc)
+            ),
+            React.createElement('div', null,
+              React.createElement('h4', { className: 'font-bold mb-4' }, t.footer.shop),
+              React.createElement('div', { className: 'space-y-2 text-sm' },
+                t.footer.shop_links.map((link, i) => React.createElement('p', { key: i }, link))
               )
             ),
             React.createElement('div', null,
-              React.createElement('h4', { className: 'font-bold mb-4' }, 'Shop'),
+              React.createElement('h4', { className: 'font-bold mb-4' }, t.footer.company),
               React.createElement('div', { className: 'space-y-2 text-sm' },
-                React.createElement('p', null, 'All Products'),
-                React.createElement('p', null, 'New Arrivals'),
-                React.createElement('p', null, 'Best Sellers'),
-                React.createElement('p', null, 'Gift Sets')
+                 t.footer.company_links.map((link, i) => React.createElement('p', { key: i }, link))
               )
             ),
             React.createElement('div', null,
-              React.createElement('h4', { className: 'font-bold mb-4' }, 'Company'),
+              React.createElement('h4', { className: 'font-bold mb-4' }, t.footer.support),
               React.createElement('div', { className: 'space-y-2 text-sm' },
-                React.createElement('p', null, 'About Us'),
-                React.createElement('p', null, 'Sustainability'),
-                React.createElement('p', null, 'Careers'),
-                React.createElement('p', null, 'Contact')
-              )
-            ),
-            React.createElement('div', null,
-              React.createElement('h4', { className: 'font-bold mb-4' }, 'Support'),
-              React.createElement('div', { className: 'space-y-2 text-sm' },
-                React.createElement('p', null, 'Shipping & Returns'),
-                React.createElement('p', null, 'FAQ'),
-                React.createElement('p', null, 'Privacy Policy'),
-                React.createElement('p', null, 'Terms of Service')
+                 t.footer.support_links.map((link, i) => React.createElement('p', { key: i }, link))
               )
             )
           ),
           React.createElement('div', { className: 'max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-400' },
-            '© 2024 Saya Natural Beauty. All rights reserved.'
+            t.footer.rights
           )
         );
       };
@@ -642,6 +864,7 @@
         const [currentPage, setCurrentPage] = useState('home');
         const [selectedProduct, setSelectedProduct] = useState(null);
         const [darkMode, setDarkMode] = useState(false);
+        const [language, setLanguage] = useState('en');
 
         useEffect(() => {
           if (darkMode) {
@@ -651,37 +874,49 @@
           }
         }, [darkMode]);
 
+        useEffect(() => {
+          document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+          document.documentElement.lang = language;
+          if (language === 'ar') {
+             document.body.style.fontFamily = "'Cairo', sans-serif";
+          } else {
+             document.body.style.fontFamily = "'Lato', sans-serif";
+          }
+        }, [language]);
+
         const toggleDarkMode = () => setDarkMode(!darkMode);
+        const toggleLanguage = () => setLanguage(prev => prev === 'en' ? 'ar' : 'en');
+        const t = translations[language];
 
         let pageContent;
         switch(currentPage) {
           case 'home':
-            pageContent = React.createElement(HomePage, { setCurrentPage, setSelectedProduct });
+            pageContent = React.createElement(HomePage, { setCurrentPage, setSelectedProduct, t, language });
             break;
           case 'shop':
           case 'products':
-            pageContent = React.createElement(ProductsPage, { setCurrentPage, setSelectedProduct });
+            pageContent = React.createElement(ProductsPage, { setCurrentPage, setSelectedProduct, t, language });
             break;
           case 'product-detail':
-            pageContent = React.createElement(ProductDetailPage, { product: selectedProduct, setCurrentPage });
+            pageContent = React.createElement(ProductDetailPage, { product: selectedProduct, setCurrentPage, t, language });
             break;
           case 'about':
-            pageContent = React.createElement(AboutPage);
+            pageContent = React.createElement(AboutPage, { t });
             break;
           case 'reviews':
-            pageContent = React.createElement(ReviewsPage);
+            pageContent = React.createElement(ReviewsPage, { t });
             break;
           case 'contact':
-            pageContent = React.createElement(ContactPage);
+            pageContent = React.createElement(ContactPage, { t });
             break;
           default:
-            pageContent = React.createElement(HomePage, { setCurrentPage, setSelectedProduct });
+            pageContent = React.createElement(HomePage, { setCurrentPage, setSelectedProduct, t, language });
         }
 
         return React.createElement('div', { className: 'min-h-screen flex flex-col' },
-          React.createElement(Navigation, { currentPage, setCurrentPage, darkMode, toggleDarkMode }),
+          React.createElement(Navigation, { currentPage, setCurrentPage, darkMode, toggleDarkMode, language, toggleLanguage, t }),
           React.createElement('main', { className: 'flex-grow' }, pageContent),
-          React.createElement(Footer)
+          React.createElement(Footer, { t })
         );
       };
 
