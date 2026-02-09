@@ -5,109 +5,67 @@
       "name": "Bitter Almond Oil",
       "category": "Oils",
       "price": 18.00,
-      "image": "./Bitter-Almond-oil-Elsuna-Elhelwa.jpg",
+      "image": "./images/Bitter-Almond-oil-Elsuna-Elhelwa.jpg",
       "description": "Pure Bitter Almond Oil by Elsuna Elhelwa. Rich in Vitamin E and essential fatty acids, this oil deeply nourishes the skin and helps reduce the appearance of dark circles and fine lines.",
       "ingredients": ["100% Pure Bitter Almond Oil"],
       "benefits": "Deep hydration, brightens dark circles, anti-aging properties",
       "inStock": true,
-      "featured": true,
-      "name_ar": "إكسير الزيتون المشرق",
-      "category_ar": "زيوت",
-      "description_ar": "مصل مجدد نقي لجمال خالد. انغمسي في الذهب السائل للبحر الأبيض المتوسط.",
-      "ingredients_ar": [
-        "سكوالين الزيتون",
-        "حمض الهيالورونيك",
-        "فيتامين هـ"
-      ],
-      "benefits_ar": "ترطيب عميق وإصلاح، درع مضاد للأكسدة، توهج مسائي"
+      "featured": true
     },
     {
       "id": "castor-oil",
       "name": "Castor Oil",
       "category": "Oils",
       "price": 16.00,
-      "image": "./Castor-oil-Elsuna-Elhelwa.jpg",
+      "image": "./images/Castor-oil-Elsuna-Elhelwa.jpg",
       "description": "Premium Castor Oil for hair and skin. Known for promoting hair growth and thickness, this thick, nourishing oil is a staple for natural beauty routines.",
       "ingredients": ["100% Pure Castor Oil"],
       "benefits": "Promotes hair growth, thickens lashes/brows, deep moisturization",
       "inStock": true,
-      "featured": true,
-      "name_ar": "زيت الأركان النقي",
-      "category_ar": "زيوت",
-      "description_ar": "الذهب السائل من المغرب. غني بمضادات الأكسدة وفيتامين هـ لتغذية الشعر والبشرة.",
-      "ingredients_ar": [
-        "100% زيت أركان نقي"
-      ],
-      "benefits_ar": "يرطب البشرة، يقوي الشعر، خصائص مضادة للشيخوخة"
+      "featured": true
     },
     {
       "id": "coconut-oil",
       "name": "Coconut Oil",
       "category": "Oils",
       "price": 15.00,
-      "image": "./Coconuto-oil-Phytamine.jpg",
+      "image": "./images/Coconuto-oil-Phytamine.jpg",
       "description": "Virgin Coconut Oil by Phytamine. A versatile oil that penetrates deep into hair shafts for intensive repair and hydrates skin for a soft, smooth texture.",
       "ingredients": ["100% Pure Coconut Oil"],
       "benefits": "Intensive hair repair, skin hydration, makeup remover",
       "inStock": true,
-      "featured": false,
-      "name_ar": "رذاذ الورد الدمشقي",
-      "category_ar": "علاجات",
-      "description_ar": "تونر ماء الورد المنعش الذي يرطب ويوازن درجة حموضة بشرتك.",
-      "ingredients_ar": [
-        "ماء الورد الدمشقي",
-        "جليسرين"
-      ],
-      "benefits_ar": "يرطب، يوحد اللون، يوازن الحموضة، يهدئ التهيج"
+      "featured": false
     },
     {
       "id": "coxix-intimate-wash",
       "name": "Coxix Cool Intimate Wash",
       "category": "Treatments",
       "price": 12.00,
-      "image": "./Coxix-cool-intimate-wash.jpg",
+      "image": "./images/Coxix-cool-intimate-wash.jpg",
       "description": "Gentle and refreshing intimate wash. Formulated to respect natural pH balance while providing a cooling, soothing sensation for daily comfort.",
       "ingredients": ["Aqua", "Aloe Vera Extract", "Menthol", "Lactic Acid"],
       "benefits": "pH balanced, cooling effect, gentle cleansing",
       "inStock": true,
-      "featured": false,
-      "name_ar": "قناع الطين المغربي",
-      "category_ar": "علاجات",
-      "description_ar": "قناع تنظيف عميق بالطين المغربي الأصيل لإزالة السموم والتنقية.",
-      "ingredients_ar": [
-        "طين مغربي",
-        "ماء ورد",
-        "زيت أركان"
-      ],
-      "benefits_ar": "تنظيف عميق، يفتح المسام، يفتح البشرة"
+      "featured": false
     },
     {
       "id": "garlic-oil",
       "name": "Garlic Oil",
       "category": "Oils",
       "price": 18.00,
-      "image": "./Garlic-oil-Elsuna-Elhelwa.jpg",
+      "image": "./images/Garlic-oil-Elsuna-Elhelwa.jpg",
       "description": "Potent Garlic Oil for hair strengthening. Rich in sulfur and vitamins, it helps combat hair loss and stimulates the scalp for healthier growth.",
       "ingredients": ["Garlic Oil Extract", "Carrier Oil"],
       "benefits": "Strengthens hair follicles, reduces shedding, stimulates scalp",
       "inStock": true,
-      "featured": false,
-      "name_ar": "الصابون التقليدي",
-      "category_ar": "صابون",
-      "description_ar": "صابون زيت الزيتون المصنوع يدوياً باتباع التقاليد المغربية القديمة.",
-      "ingredients_ar": [
-        "زيت زيتون",
-        "زيت جوز الهند",
-        "زبدة الشيا"
-      ],
-      "benefits_ar": "تنظيف لطيف، ترطيب، مناسب لجميع أنواع البشرة"
+      "featured": false
     },
     {
       "id": "grape-seed-oil",
       "name": "Grape Seed Oil",
       "category": "Oils",
       "price": 20.00,
-      "image": "./Grape-seed-oil-Elsuna-Elhelwa.jpg",
+      "image": "./images/Grape-seed-oil-Elsuna-Elhelwa.jpg",
       "description": "Lightweight Grape Seed Oil. High in antioxidants and linoleic acid, it absorbs quickly without clogging pores. Perfect for acne-prone and sensitive skin.",
       "ingredients": ["100% Pure Grape Seed Oil"],
       "benefits": "Non-comedogenic, antioxidant protection, balances oily skin",
@@ -119,49 +77,31 @@
       "name": "Jojoba Oil",
       "category": "Oils",
       "price": 22.00,
-      "image": "./Jojoba-oil-Elsuna-Elhelwa.jpg",
+      "image": "./images/Jojoba-oil-Elsuna-Elhelwa.jpg",
       "description": "Golden Jojoba Oil. Structurally similar to skin's natural sebum, making it an excellent balancer for both dry and oily skin types.",
       "ingredients": ["100% Pure Simmondsia Chinensis (Jojoba) Oil"],
       "benefits": "Balances oil production, mimics natural sebum, long-lasting hydration",
       "inStock": true,
-      "featured": false,
-      "name_ar": "صابون العسل والشوفان",
-      "category_ar": "صابون",
-      "description_ar": "صابون تقشير لطيف بالعسل العضوي والشوفان الغروي.",
-      "ingredients_ar": [
-        "عسل خام",
-        "شوفان غروي",
-        "زيت زيتون"
-      ],
-      "benefits_ar": "تقشير لطيف، ترطيب، مهدئ"
+      "featured": false
     },
     {
       "id": "kenta-creme",
       "name": "Kenta Creme",
       "category": "Treatments",
       "price": 15.00,
-      "image": "./Kenta-Creme.jpg",
+      "image": "./images/Kenta-Creme.jpg",
       "description": "Traditional Moroccan Kenta Cream. A beloved formula known for soothing irritation and brightening the skin. Ideal for sensitive areas.",
       "ingredients": ["Zinc Oxide", "Olive Oil", "Vitamin E"],
       "benefits": "Soothes irritation, brightens skin tone, gentle formula",
       "inStock": true,
-      "featured": true,
-      "name_ar": "سيروم النضارة",
-      "category_ar": "زيوت",
-      "description_ar": "سيروم مفتح بفيتامين سي والنباتات الطبيعية لبشرة مضيئة.",
-      "ingredients_ar": [
-        "فيتامين سي",
-        "زيت ثمر الورد",
-        "زيت الجوجوبا"
-      ],
-      "benefits_ar": "يفتح البشرة، يوحد اللون، حماية مضادة للأكسدة"
+      "featured": true
     },
     {
       "id": "mint-oil",
       "name": "Mint Oil",
       "category": "Oils",
       "price": 14.00,
-      "image": "./Mint-oil-Elsuna-Elhelwa.jpg",
+      "image": "./images/Mint-oil-Elsuna-Elhelwa.jpg",
       "description": "Invigorating Mint Oil. Stimulates the scalp and provides a refreshing sensation. Great for relieving tension and promoting circulation.",
       "ingredients": ["Peppermint Oil"],
       "benefits": "Stimulates scalp, refreshing scent, cooling sensation",
@@ -173,47 +113,31 @@
       "name": "Moulin Bouge Grow Strong Creme",
       "category": "Treatments",
       "price": 25.00,
-      "image": "./Moulin-Bouge-Grow-Strong-Creme.jpg",
+      "image": "./images/Moulin-Bouge-Grow-Strong-Creme.jpg",
       "description": "Intensive hair strengthening cream. Deeply conditions and fortifies hair strands to prevent breakage and encourage length retention.",
       "ingredients": ["Shea Butter", "Castor Oil", "Hydrolyzed Protein"],
       "benefits": "Strengthens hair, reduces breakage, promotes growth",
       "inStock": true,
-      "featured": false,
-      "name_ar": "أسطوانة اليشم للوجه",
-      "category_ar": "مجموعات",
-      "description_ar": "أسطوانة يشم أصلية لتدليك الوجه والتصريف اللمفاوي.",
-      "ingredients_ar": [
-        "حجر يشم طبيعي 100%"
-      ],
-      "benefits_ar": "يقلل الانتفاخ، يحسن الدورة الدموية، يعزز الاسترخاء"
+      "featured": false
     },
     {
       "id": "moulin-rouge-set",
       "name": "Moulin Rouge Set",
       "category": "Sets",
       "price": 45.00,
-      "image": "./Moulin-Rouge-set.jpg",
+      "image": "./images/Moulin-Rouge-set.jpg",
       "description": "The complete Moulin Rouge collection. A luxurious set for comprehensive body and hair care.",
       "ingredients": ["Various Natural Ingredients"],
       "benefits": "Complete routine, perfect gift, value set",
       "inStock": true,
-      "featured": true,
-      "name_ar": "مجموعة الزيوت الأساسية",
-      "category_ar": "مجموعات",
-      "description_ar": "مجموعة مختارة من ثلاثة زيوت مميزة: الأركان، وثمر الورد، والجوجوبا.",
-      "ingredients_ar": [
-        "زيت أركان",
-        "زيت ثمر الورد",
-        "زيت الجوجوبا"
-      ],
-      "benefits_ar": "روتين كامل للعناية بالبشرة، زيوت متعددة الاستخدامات، مناسبة للسفر"
+      "featured": true
     },
     {
       "id": "mustard-oil",
       "name": "Mustard Oil",
       "category": "Oils",
       "price": 16.00,
-      "image": "./Mustard-oil-Elsuna-Elhelwa.jpg",
+      "image": "./images/Mustard-oil-Elsuna-Elhelwa.jpg",
       "description": "Stimulating Mustard Oil. A traditional remedy for hair growth that warms the scalp and improves circulation to the follicles.",
       "ingredients": ["Mustard Seed Oil"],
       "benefits": "Boosts circulation, warming effect, deep conditioning",
@@ -225,26 +149,19 @@
       "name": "Sidr Oil",
       "category": "Oils",
       "price": 24.00,
-      "image": "./Sidr-oil-Elsuna-Elhelwa.jpg",
+      "image": "./images/Sidr-oil-Elsuna-Elhelwa.jpg",
       "description": "Premium Sidr Oil (Ziziphus). Revered in ancient traditions for its purifying and restorative properties for both skin and hair.",
       "ingredients": ["Sidr Leaf Extract", "Base Oil"],
       "benefits": "Purifies skin, strengthens hair roots, ancient remedy",
       "inStock": true,
-      "featured": false,
-      "name_ar": "مجموعة الصابون الحرفي",
-      "category_ar": "مجموعات",
-      "description_ar": "طقم هدايا جميل يضم أربعة أنواع من الصابون الحرفي المصنوع يدوياً.",
-      "ingredients_ar": [
-        "مجموعة متنوعة من الزيوت الطبيعية والنباتات"
-      ],
-      "benefits_ar": "هدية مثالية، روائح متنوعة، تغليف صديق للبيئة"
+      "featured": false
     },
     {
       "id": "teresia-tone-up",
       "name": "Teresia Brightening Tone Up Creme",
       "category": "Treatments",
       "price": 28.00,
-      "image": "./Teresia-Brightening-tone-up-creme.jpg",
+      "image": "./images/Teresia-Brightening-tone-up-creme.jpg",
       "description": "Instant brightening cream that evens out skin tone and provides a radiant finish. Can be used as a makeup base or daily moisturizer.",
       "ingredients": ["Niacinamide", "Snail Mucin", "White Flower Complex"],
       "benefits": "Instant brightening, evens skin tone, moisturizes",
@@ -256,21 +173,12 @@
       "name": "Tea Tree Oil",
       "category": "Oils",
       "price": 18.00,
-      "image": "./Tree-tea-oil-Elsuna-Elhelwa.jpg",
+      "image": "./images/Tree-tea-oil-Elsuna-Elhelwa.jpg",
       "description": "Purifying Tea Tree Oil. Famous for its antibacterial and antifungal properties. Excellent for targeting blemishes and scalp issues.",
       "ingredients": ["100% Pure Melaleuca Alternifolia (Tea Tree) Oil"],
       "benefits": "Combats acne, anti-dandruff, purifying",
       "inStock": true,
-      "featured": false,
-      "name_ar": "زيت الإصلاح الليلي",
-      "category_ar": "زيوت",
-      "description_ar": "زيت علاج ليلي مكثف لإصلاح وتجديد البشرة أثناء النوم.",
-      "ingredients_ar": [
-        "زيت ثمر الورد",
-        "فيتامين هـ",
-        "زيت زهرة الربيع المسائية"
-      ],
-      "benefits_ar": "إصلاح ليلي، يقلل الخطوط الدقيقة، تغذية عميقة"
+      "featured": false
     }
   ],
   "reviews": [
@@ -282,10 +190,7 @@
       "product": "Bitter Almond Oil",
       "comment": "This Bitter Almond oil has transformed my under-eye area. Dark circles are visibly reduced!",
       "verified": true,
-      "date": "2024-01-15",
-      "name_ar": "سارة جينكينز",
-      "location_ar": "London, UK",
-      "comment_ar": "لقد جربت عددًا لا يحصى من الأمصال الفاخرة، لكن لا شيء يهدئ بشرتي مثل إكسير الزيتون من صايا. إنه يعطي شعورًا بالثبات والطبيعية بشكل لا يصدق."
+      "date": "2024-01-15"
     },
     {
       "id": 2,
@@ -295,10 +200,7 @@
       "product": "Kenta Creme",
       "comment": "Authentic Kenta cream. Works wonders for sensitive skin. Highly recommend.",
       "verified": true,
-      "date": "2024-01-10",
-      "name_ar": "أميرة م.",
-      "location_ar": "Dubai, UAE",
-      "comment_ar": "لأني من المغرب، أعرف زيت الأركان الجيد عندما أراه. صايا تقدم المنتج الحقيقي. العبوة جميلة أيضًا، مما يجعلها هدية رائعة."
+      "date": "2024-01-10"
     },
     {
       "id": 3,
@@ -308,10 +210,7 @@
       "product": "Teresia Brightening Tone Up Creme",
       "comment": "Amazing instant glow. My skin looks so healthy without makeup.",
       "verified": true,
-      "date": "2024-01-08",
-      "name_ar": "ليام كارتر",
-      "location_ar": "Sydney, AU",
-      "comment_ar": "لم أكن أعلم أبدًا أن العناية بالبشرة الطبيعية يمكن أن تكون بهذه الفعالية. نتائج مكافحة الشيخوخة واضحة بعد شهر واحد فقط."
+      "date": "2024-01-08"
     },
     {
       "id": 4,
@@ -321,10 +220,7 @@
       "product": "Sidr Oil",
       "comment": "The best Sidr oil I've found. Very pure and potent.",
       "verified": true,
-      "date": "2024-01-05",
-      "name_ar": "فاطمة الزهراء",
-      "location_ar": "Cairo, EG",
-      "comment_ar": "فقط اشتريه. ستشكرك بشرتك لاحقًا. الملمس رائع."
+      "date": "2024-01-05"
     },
     {
       "id": 5,
