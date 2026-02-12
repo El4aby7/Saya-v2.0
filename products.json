@@ -15,7 +15,8 @@
       "benefits": "Deep hydration, brightens dark circles, anti-aging properties",
       "benefits_ar": "ترطيب عميق، تفتيح الهالات السوداء، خصائص مضادة للشيخوخة",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "date": "2024-01-15"
     },
     {
       "id": "castor-oil",
@@ -32,7 +33,8 @@
       "benefits": "Promotes hair growth, thickens lashes/brows, deep moisturization",
       "benefits_ar": "يعزز نمو الشعر، يكثف الرموش والحواجب، ترطيب عميق",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "date": "2024-01-10"
     },
     {
       "id": "coconut-oil",
@@ -49,7 +51,8 @@
       "benefits": "Intensive hair repair, skin hydration, makeup remover",
       "benefits_ar": "إصلاح مكثف للشعر، ترطيب للبشرة، مزيل للمكياج",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "date": "2023-12-05"
     },
     {
       "id": "coxix-intimate-wash",
@@ -66,7 +69,8 @@
       "benefits": "pH balanced, cooling effect, gentle cleansing",
       "benefits_ar": "متوازن الحموضة، تأثير مبرد، تنظيف لطيف",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "date": "2023-11-20"
     },
     {
       "id": "garlic-oil",
@@ -83,7 +87,8 @@
       "benefits": "Strengthens hair follicles, reduces shedding, stimulates scalp",
       "benefits_ar": "يقوي بصيلات الشعر، يقلل التساقط، يحفز فروة الرأس",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "date": "2023-10-15"
     },
     {
       "id": "grape-seed-oil",
@@ -100,7 +105,8 @@
       "benefits": "Non-comedogenic, antioxidant protection, balances oily skin",
       "benefits_ar": "غير مسبب للرؤوس السوداء، حماية مضادة للأكسدة، يوازن البشرة الدهنية",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "date": "2024-01-20"
     },
     {
       "id": "jojoba-oil",
@@ -117,7 +123,8 @@
       "benefits": "Balances oil production, mimics natural sebum, long-lasting hydration",
       "benefits_ar": "يوازن إنتاج الزيوت، يحاكي الزهم الطبيعي، ترطيب طويل الأمد",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "date": "2023-09-10"
     },
     {
       "id": "kenta-creme",
@@ -134,7 +141,8 @@
       "benefits": "Soothes irritation, brightens skin tone, gentle formula",
       "benefits_ar": "يهدئ التهيج، يفتح لون البشرة، تركيبة لطيفة",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "date": "2024-01-05"
     },
     {
       "id": "mint-oil",
@@ -151,7 +159,8 @@
       "benefits": "Stimulates scalp, refreshing scent, cooling sensation",
       "benefits_ar": "يحفز فروة الرأس، رائحة منعشة، إحساس مبرد",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "date": "2023-08-15"
     },
     {
       "id": "moulin-bouge-creme",
@@ -168,7 +177,8 @@
       "benefits": "Strengthens hair, reduces breakage, promotes growth",
       "benefits_ar": "يقوي الشعر، يقلل التكسر، يعزز النمو",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "date": "2023-12-15"
     },
     {
       "id": "moulin-rouge-set",
@@ -185,7 +195,8 @@
       "benefits": "Complete routine, perfect gift, value set",
       "benefits_ar": "روتين كامل، هدية مثالية، مجموعة قيمة",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "date": "2024-01-25"
     },
     {
       "id": "mustard-oil",
@@ -202,7 +213,8 @@
       "benefits": "Boosts circulation, warming effect, deep conditioning",
       "benefits_ar": "يعزز الدورة الدموية، تأثير دافئ، ترطيب عميق",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "date": "2023-07-20"
     },
     {
       "id": "sidr-oil",
@@ -219,7 +231,8 @@
       "benefits": "Purifies skin, strengthens hair roots, ancient remedy",
       "benefits_ar": "ينقي البشرة، يقوي جذور الشعر، علاج قديم",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "date": "2023-06-30"
     },
     {
       "id": "teresia-tone-up",
@@ -236,7 +249,8 @@
       "benefits": "Instant brightening, evens skin tone, moisturizes",
       "benefits_ar": "تفتيح فوري، يوحد لون البشرة، يرطب",
       "inStock": true,
-      "featured": true
+      "featured": true,
+      "date": "2024-01-30"
     },
     {
       "id": "tea-tree-oil",
@@ -253,7 +267,8 @@
       "benefits": "Combats acne, anti-dandruff, purifying",
       "benefits_ar": "يحارب حب الشباب، مضاد للقشرة، منقي",
       "inStock": true,
-      "featured": false
+      "featured": false,
+      "date": "2023-11-10"
     }
   ],
   "_separator": "---------------- REVIEWS ----------------",

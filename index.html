@@ -57,6 +57,10 @@
       
       const { useState, useEffect } = React;
 
+      // ==================== CONFIG ====================
+      // Replace with your Google Apps Script Web App URL
+      const GOOGLE_SCRIPT_URL = "";
+
       // ==================== TRANSLATIONS ====================
       const translations = {
         en: {
@@ -94,7 +98,9 @@
             desc: 'Subscribe to receive newsletters, early access to new releases, and exclusive offers.',
             placeholder: 'Enter your email',
             button: 'Subscribe',
-            alert: 'Thank you for subscribing! (Note: This is a demo - no actual email will be sent)'
+            alert: 'Thank you for subscribing!',
+            error: 'Something went wrong. Please try again.',
+            loading: 'Subscribing...'
           },
           shop: {
             title: 'Our Products',
@@ -155,6 +161,39 @@
             send: 'Send Message',
             alert: 'Thank you for your message! We\'ll get back to you soon. (Demo mode - no email sent)'
           },
+          sustainability: {
+            title: 'Sustainability',
+            desc: 'At Saya, we are committed to ethical sourcing and environmental responsibility.',
+            p1: 'Our ingredients are sourced directly from local farmers in Morocco and Sudan, ensuring fair wages and sustainable farming practices.',
+            p2: 'We use recyclable packaging and strive to minimize our carbon footprint in every step of our supply chain.'
+          },
+          careers: {
+            title: 'Careers',
+            desc: 'Join the Saya family.',
+            p1: 'We are always looking for passionate individuals to join our team. While we have no open positions at the moment, feel free to send your resume to our email for future consideration.'
+          },
+          shipping: {
+            title: 'Shipping & Returns',
+            p1: 'We ship worldwide. Orders are typically processed within 1-2 business days.',
+            p2: 'If you are not satisfied with your purchase, we accept returns within 30 days of delivery for unused products in their original packaging.'
+          },
+          faq: {
+            title: 'Frequently Asked Questions',
+            q1: 'Are your products organic?',
+            a1: 'Yes, all our oils and ingredients are 100% natural and organically sourced.',
+            q2: 'Do you ship internationally?',
+            a2: 'Yes, we ship to most countries worldwide.',
+            q3: 'How should I store the oils?',
+            a3: 'Store them in a cool, dry place away from direct sunlight.'
+          },
+          privacy: {
+            title: 'Privacy Policy',
+            p1: 'Your privacy is important to us. We only collect information necessary to process your orders and improve your experience. We never sell your data to third parties.'
+          },
+          terms: {
+            title: 'Terms of Service',
+            p1: 'By using our website, you agree to these terms. We reserve the right to modify these terms at any time. All content on this site is the property of Saya Natural Beauty.'
+          },
           footer: {
             desc: 'Natural Beauty, Natural Skincare. Imported quality from Morocco & Sudan.',
             shop: 'Shop',
@@ -201,7 +240,9 @@
             desc: 'اشتركي لتلقي النشرات الإخبارية، والوصول المبكر للإصدارات الجديدة، والعروض الحصرية.',
             placeholder: 'أدخلي بريدك الإلكتروني',
             button: 'اشترك',
-            alert: 'شكراً لاشتراكك! (ملاحظة: هذا عرض تجريبي - لن يتم إرسال بريد إلكتروني فعلي)'
+            alert: 'شكراً لاشتراكك!',
+            error: 'حدث خطأ ما. حاول مرة اخرى.',
+            loading: 'جاري الاشتراك...'
           },
           shop: {
             title: 'منتجاتنا',
@@ -261,6 +302,39 @@
             msg_ph: 'رسالتك',
             send: 'إرسال الرسالة',
             alert: 'شكراً لرسالتك! سنعود إليك قريباً. (وضع تجريبي - لم يتم إرسال بريد إلكتروني)'
+          },
+          sustainability: {
+            title: 'الاستدامة',
+            desc: 'في صايا، نحن ملتزمون بالمصادر الأخلاقية والمسؤولية البيئية.',
+            p1: 'يتم الحصول على مكوناتنا مباشرة من المزارعين المحليين في المغرب والسودان، مما يضمن أجوراً عادلة وممارسات زراعية مستدامة.',
+            p2: 'نستخدم تغليفاً قابلاً لإعادة التدوير ونسعى لتقليل بصمتنا الكربونية في كل خطوة من خطوات سلسلة التوريد.'
+          },
+          careers: {
+            title: 'الوظائف',
+            desc: 'انضمي لعائلة صايا.',
+            p1: 'نحن نبحث دائماً عن أفراد شغوفين للانضمام إلى فريقنا. على الرغم من عدم وجود وظائف شاغرة في الوقت الحالي، لا تتردد في إرسال سيرتك الذاتية إلى بريدنا الإلكتروني للنظر فيها مستقبلاً.'
+          },
+          shipping: {
+            title: 'الشحن والإرجاع',
+            p1: 'نحن نشحن لجميع أنحاء العالم. يتم عادةً معالجة الطلبات خلال 1-2 يوم عمل.',
+            p2: 'إذا لم تكن راضياً عن مشترياتك، نقبل الإرجاع خلال 30 يوماً من التسليم للمنتجات غير المستخدمة في عبوتها الأصلية.'
+          },
+          faq: {
+            title: 'الأسئلة الشائعة',
+            q1: 'هل منتجاتكم عضوية؟',
+            a1: 'نعم، جميع زيوتنا ومكوناتنا طبيعية 100% ومن مصادر عضوية.',
+            q2: 'هل تشحنون دولياً؟',
+            a2: 'نعم، نحن نشحن لمعظم الدول حول العالم.',
+            q3: 'كيف يجب أن أخزن الزيوت؟',
+            a3: 'خزنها في مكان بارد وجاف بعيداً عن أشعة الشمس المباشرة.'
+          },
+          privacy: {
+            title: 'سياسة الخصوصية',
+            p1: 'خصوصيتك مهمة بالنسبة لنا. نجمع فقط المعلومات اللازمة لمعالجة طلباتك وتحسين تجربتك. لا نبيع بياناتك لأطراف ثالثة أبداً.'
+          },
+          terms: {
+            title: 'شروط الخدمة',
+            p1: 'باستخدام موقعنا، فإنك توافق على هذه الشروط. نحتفظ بالحق في تعديل هذه الشروط في أي وقت. جميع المحتويات في هذا الموقع هي ملك لصايا للجمال الطبيعي.'
           },
           footer: {
             desc: 'جمال طبيعي، عناية طبيعية بالبشرة. جودة مستوردة من المغرب والسودان.',
@@ -365,6 +439,17 @@
         );
       };
 
+      // ==================== INFO PAGES ====================
+      const GenericPage = ({ title, children }) => (
+        React.createElement('div', { className: 'animate-fade-in min-h-screen' },
+          React.createElement('div', { className: 'max-w-4xl mx-auto px-4 py-20' },
+            React.createElement('h1', { className: 'font-display text-4xl mb-8' }, title),
+            React.createElement('div', { className: 'w-16 h-1 bg-primary mb-12' }),
+            React.createElement('div', { className: 'prose prose-lg max-w-none dark:prose-invert' }, children)
+          )
+        )
+      );
+
       // ==================== HOME PAGE ====================
       const HomePage = ({ setCurrentPage, setSelectedProduct, t, language }) => {
         const featuredProducts = productsData.filter(p => p.featured).slice(0, 3);
@@ -453,34 +538,90 @@
             React.createElement('div', { className: 'max-w-3xl mx-auto text-center px-4' },
               React.createElement('h2', { className: 'font-display text-3xl mb-4' }, t.newsletter.title),
               React.createElement('p', { className: 'mb-8' }, t.newsletter.desc),
-              React.createElement('form', {
-                className: 'flex flex-col sm:flex-row gap-4 max-w-md mx-auto',
-                onSubmit: (e) => {
-                  e.preventDefault();
-                  alert(t.newsletter.alert);
-                }
-              },
-                React.createElement('input', {
-                  type: 'email',
-                  placeholder: t.newsletter.placeholder,
-                  required: true,
-                  className: 'flex-1 px-4 py-3 rounded-sm text-gray-900'
-                }),
-                React.createElement('button', {
-                  type: 'submit',
-                  className: 'px-8 py-3 bg-gray-900 hover:bg-gray-800 transition-colors rounded-sm'
-                }, t.newsletter.button)
-              )
+              React.createElement(NewsletterForm, { t })
             )
           )
         );
       };
 
+      // ==================== NEWSLETTER COMPONENT ====================
+      const NewsletterForm = ({ t }) => {
+        const [email, setEmail] = useState('');
+        const [status, setStatus] = useState('idle'); // idle, loading, success, error
+
+        const handleSubmit = async (e) => {
+          e.preventDefault();
+          if (!GOOGLE_SCRIPT_URL) {
+            alert("Please configure the GOOGLE_SCRIPT_URL in index.html first!");
+            return;
+          }
+
+          setStatus('loading');
+
+          try {
+            await fetch(GOOGLE_SCRIPT_URL, {
+              method: 'POST',
+              mode: 'no-cors', // Important for Google Sheets
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ email: email })
+            });
+
+            // Since mode is no-cors, we can't read the response, so we assume success if no error thrown
+            setStatus('success');
+            setEmail('');
+            setTimeout(() => setStatus('idle'), 5000);
+
+          } catch (error) {
+            console.error('Error:', error);
+            setStatus('error');
+            setTimeout(() => setStatus('idle'), 5000);
+          }
+        };
+
+        return React.createElement('form', {
+            className: 'flex flex-col sm:flex-row gap-4 max-w-md mx-auto',
+            onSubmit: handleSubmit
+          },
+          React.createElement('input', {
+            type: 'email',
+            value: email,
+            onChange: (e) => setEmail(e.target.value),
+            placeholder: t.newsletter.placeholder,
+            required: true,
+            className: 'flex-1 px-4 py-3 rounded-sm text-gray-900 disabled:opacity-50'
+          }),
+          React.createElement('button', {
+            type: 'submit',
+            disabled: status === 'loading' || status === 'success',
+            className: `px-8 py-3 transition-colors rounded-sm min-w-[120px] ${
+              status === 'success' ? 'bg-green-600 hover:bg-green-700' :
+              status === 'error' ? 'bg-red-600 hover:bg-red-700' :
+              'bg-gray-900 hover:bg-gray-800'
+            }`
+          },
+            status === 'loading' ? t.newsletter.loading :
+            status === 'success' ? '✓' :
+            status === 'error' ? '!' :
+            t.newsletter.button
+          ),
+          status === 'success' && React.createElement('p', { className: 'absolute mt-14 text-sm w-full text-center' }, t.newsletter.alert),
+          status === 'error' && React.createElement('p', { className: 'absolute mt-14 text-sm w-full text-center text-red-200' }, t.newsletter.error)
+        );
+      };
+
       // ==================== PRODUCTS PAGE ====================
-      const ProductsPage = ({ setCurrentPage, setSelectedProduct, t, language }) => {
-        const [filter, setFilter] = useState('All');
-        const [sortBy, setSortBy] = useState('name');
+      const ProductsPage = ({ initialFilter, initialSort, setCurrentPage, setSelectedProduct, t, language }) => {
+        const [filter, setFilter] = useState(initialFilter || 'All');
+        const [sortBy, setSortBy] = useState(initialSort || 'name');
         const [searchTerm, setSearchTerm] = useState('');
+
+        // Reset filter/sort if props change (when navigating from footer)
+        useEffect(() => {
+          if (initialFilter) setFilter(initialFilter);
+          if (initialSort) setSortBy(initialSort);
+        }, [initialFilter, initialSort]);
 
         const categories = [
             { key: 'All', label: t.shop.filter_all },
@@ -517,6 +658,7 @@
           }
           if (sortBy === 'price-low') return a.price - b.price;
           if (sortBy === 'price-high') return b.price - a.price;
+          if (sortBy === 'date') return new Date(b.date || 0) - new Date(a.date || 0);
           return 0;
         });
 
@@ -827,29 +969,60 @@
       };
 
       // ==================== FOOTER ====================
-      const Footer = ({ t }) => {
+      const Footer = ({ t, setCurrentPage, setShopParams }) => {
+        const handleShopLink = (type) => {
+          if (type === 0) { setShopParams({ filter: 'All', sort: 'name' }); } // All Products
+          if (type === 1) { setShopParams({ filter: 'All', sort: 'date' }); } // New Arrivals
+          if (type === 2) { setShopParams({ filter: 'All', sort: 'name' }); } // Best Sellers (fallback to name for now)
+          if (type === 3) { setShopParams({ filter: 'Sets', sort: 'name' }); } // Gift Sets
+          setCurrentPage('shop');
+          window.scrollTo(0, 0);
+        };
+
+        const handleCompanyLink = (type) => {
+          if (type === 0) setCurrentPage('about');
+          if (type === 1) setCurrentPage('sustainability');
+          if (type === 2) setCurrentPage('careers');
+          if (type === 3) setCurrentPage('contact');
+          window.scrollTo(0, 0);
+        };
+
+        const handleSupportLink = (type) => {
+          if (type === 0) setCurrentPage('shipping');
+          if (type === 1) setCurrentPage('faq');
+          if (type === 2) setCurrentPage('privacy');
+          if (type === 3) setCurrentPage('terms');
+          window.scrollTo(0, 0);
+        };
+
         return React.createElement('footer', { className: 'bg-gray-900 text-white py-12' },
           React.createElement('div', { className: 'max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8' },
             React.createElement('div', null,
-              React.createElement('h3', { className: 'font-display text-xl mb-4' }, 'Saya'),
+              React.createElement('h3', { className: 'font-display text-xl mb-4 cursor-pointer', onClick: () => setCurrentPage('home') }, 'Saya'),
               React.createElement('p', { className: 'text-sm text-gray-400' }, t.footer.desc)
             ),
             React.createElement('div', null,
               React.createElement('h4', { className: 'font-bold mb-4' }, t.footer.shop),
-              React.createElement('div', { className: 'space-y-2 text-sm' },
-                t.footer.shop_links.map((link, i) => React.createElement('p', { key: i }, link))
+              React.createElement('div', { className: 'space-y-2 text-sm flex flex-col items-start' },
+                t.footer.shop_links.map((link, i) =>
+                  React.createElement('button', { key: i, onClick: () => handleShopLink(i), className: 'hover:text-primary transition-colors text-left' }, link)
+                )
               )
             ),
             React.createElement('div', null,
               React.createElement('h4', { className: 'font-bold mb-4' }, t.footer.company),
-              React.createElement('div', { className: 'space-y-2 text-sm' },
-                 t.footer.company_links.map((link, i) => React.createElement('p', { key: i }, link))
+              React.createElement('div', { className: 'space-y-2 text-sm flex flex-col items-start' },
+                 t.footer.company_links.map((link, i) =>
+                   React.createElement('button', { key: i, onClick: () => handleCompanyLink(i), className: 'hover:text-primary transition-colors text-left' }, link)
+                 )
               )
             ),
             React.createElement('div', null,
               React.createElement('h4', { className: 'font-bold mb-4' }, t.footer.support),
-              React.createElement('div', { className: 'space-y-2 text-sm' },
-                 t.footer.support_links.map((link, i) => React.createElement('p', { key: i }, link))
+              React.createElement('div', { className: 'space-y-2 text-sm flex flex-col items-start' },
+                 t.footer.support_links.map((link, i) =>
+                   React.createElement('button', { key: i, onClick: () => handleSupportLink(i), className: 'hover:text-primary transition-colors text-left' }, link)
+                 )
               )
             )
           ),
@@ -865,6 +1038,7 @@
         const [selectedProduct, setSelectedProduct] = useState(null);
         const [darkMode, setDarkMode] = useState(false);
         const [language, setLanguage] = useState('en');
+        const [shopParams, setShopParams] = useState({ filter: 'All', sort: 'name' });
 
         useEffect(() => {
           if (darkMode) {
@@ -895,7 +1069,14 @@
             break;
           case 'shop':
           case 'products':
-            pageContent = React.createElement(ProductsPage, { setCurrentPage, setSelectedProduct, t, language });
+            pageContent = React.createElement(ProductsPage, {
+              initialFilter: shopParams.filter,
+              initialSort: shopParams.sort,
+              setCurrentPage,
+              setSelectedProduct,
+              t,
+              language
+            });
             break;
           case 'product-detail':
             pageContent = React.createElement(ProductDetailPage, { product: selectedProduct, setCurrentPage, t, language });
@@ -909,6 +1090,53 @@
           case 'contact':
             pageContent = React.createElement(ContactPage, { t });
             break;
+          case 'sustainability':
+            pageContent = React.createElement(GenericPage, { title: t.sustainability.title },
+              React.createElement('p', { className: 'text-xl mb-4' }, t.sustainability.desc),
+              React.createElement('p', { className: 'mb-4' }, t.sustainability.p1),
+              React.createElement('p', null, t.sustainability.p2)
+            );
+            break;
+          case 'careers':
+            pageContent = React.createElement(GenericPage, { title: t.careers.title },
+              React.createElement('p', { className: 'text-xl mb-4' }, t.careers.desc),
+              React.createElement('p', null, t.careers.p1)
+            );
+            break;
+          case 'shipping':
+            pageContent = React.createElement(GenericPage, { title: t.shipping.title },
+              React.createElement('p', { className: 'mb-4' }, t.shipping.p1),
+              React.createElement('p', null, t.shipping.p2)
+            );
+            break;
+          case 'faq':
+            pageContent = React.createElement(GenericPage, { title: t.faq.title },
+              React.createElement('div', { className: 'space-y-6' },
+                React.createElement('div', null,
+                  React.createElement('h3', { className: 'font-bold text-lg mb-2' }, t.faq.q1),
+                  React.createElement('p', null, t.faq.a1)
+                ),
+                React.createElement('div', null,
+                  React.createElement('h3', { className: 'font-bold text-lg mb-2' }, t.faq.q2),
+                  React.createElement('p', null, t.faq.a2)
+                ),
+                React.createElement('div', null,
+                  React.createElement('h3', { className: 'font-bold text-lg mb-2' }, t.faq.q3),
+                  React.createElement('p', null, t.faq.a3)
+                )
+              )
+            );
+            break;
+          case 'privacy':
+            pageContent = React.createElement(GenericPage, { title: t.privacy.title },
+              React.createElement('p', null, t.privacy.p1)
+            );
+            break;
+          case 'terms':
+            pageContent = React.createElement(GenericPage, { title: t.terms.title },
+              React.createElement('p', null, t.terms.p1)
+            );
+            break;
           default:
             pageContent = React.createElement(HomePage, { setCurrentPage, setSelectedProduct, t, language });
         }
@@ -916,7 +1144,7 @@
         return React.createElement('div', { className: 'min-h-screen flex flex-col' },
           React.createElement(Navigation, { currentPage, setCurrentPage, darkMode, toggleDarkMode, language, toggleLanguage, t }),
           React.createElement('main', { className: 'flex-grow' }, pageContent),
-          React.createElement(Footer, { t })
+          React.createElement(Footer, { t, setCurrentPage, setShopParams })
         );
       };
 
