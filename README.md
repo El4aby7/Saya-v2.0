@@ -96,17 +96,35 @@ You have **2 files** to upload:
 ```json
 {
   "id": "unique-name-no-spaces",          ← Used in URL, don't change
-  "name": "Product Display Name",          ← What visitors see
+  "name": "Product Display Name",          ← What visitors see (English)
+  "name_ar": "Arabic Name",                ← Arabic translation
   "category": "Oils",                      ← Must be: Oils, Soaps, Treatments, or Sets
+  "category_ar": "زيوت",                   ← Arabic category
   "price": 45.00,                          ← Number only (no $ symbol)
   "image": "https://...",                  ← URL to image (see below)
-  "description": "Short description",      ← Main product description
-  "ingredients": ["Item 1", "Item 2"],     ← List of ingredients
-  "benefits": "What it does",              ← Benefits text
+  "description": "Short description",      ← Main product description (English)
+  "description_ar": "Arabic Desc",         ← Arabic description
+  "ingredients": ["Item 1", "Item 2"],     ← List of ingredients (English)
+  "ingredients_ar": ["العنصر 1"],          ← List of ingredients (Arabic)
+  "benefits": "What it does",              ← Benefits text (English)
+  "benefits_ar": "فوائد",                  ← Benefits text (Arabic)
   "inStock": true,                         ← true or false
   "featured": true                         ← true = shows on homepage
 }
 ```
+
+---
+
+## 🌍 LOCALIZATION (ARABIC SUPPORT)
+
+Your website supports both English and Arabic. In `products.json`, almost every text field has a corresponding `_ar` field.
+*   `name` → `name_ar`
+*   `description` → `description_ar`
+*   `category` → `category_ar`
+*   `ingredients` → `ingredients_ar`
+*   `benefits` → `benefits_ar`
+
+Make sure to update **both** fields when adding or editing products to keep the website consistent in both languages!
 
 ---
 
@@ -213,18 +231,26 @@ All text is in the **index.html** file. Here's where to find common things:
 
 ---
 
-## 📝 EDITING REVIEWS
+## 📝 EDITING REVIEWS & SEPARATOR
 
-In **products.json**, scroll to the `"reviews"` section:
+In **products.json**, you will see a line that looks like this:
+
+`"_separator": "---------------- REVIEWS ----------------",`
+
+This is just a visual divider to help you find where the reviews start. **You can ignore it or leave it as is.**
+
+Below that line is the `"reviews"` section:
 
 ```json
 {
   "id": 1,
   "name": "Customer Name",
   "location": "City, Country",
+  "location_ar": "City, Country (Arabic)",
   "rating": 5,                    ← 1 to 5
   "product": "Product Name",
   "comment": "Review text here",
+  "comment_ar": "Review text (Arabic)",
   "verified": true,               ← true or false
   "date": "2024-01-15"           ← YYYY-MM-DD format
 }
